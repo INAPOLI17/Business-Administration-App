@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj": {}
+    "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj": {
+    "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj",
+        "projectUniqueName": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj",
         "projectName": "PROYECTO ALMACÉN RODRIGUEZ",
-        "projectPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj",
+        "projectPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj",
         "packagesPath": "C:\\Users\\Apolinar Rodríguez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\obj\\",
+        "outputPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

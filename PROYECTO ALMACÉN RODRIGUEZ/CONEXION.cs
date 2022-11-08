@@ -11,15 +11,7 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
 {
     public class CONEXION
     {
-        SqlConnection conectar = new SqlConnection(@"Data Source=DESKTOP-QUV81SK;Initial Catalog=ALMACEN_RODRIGUEZ;Integrated Security=True");
-
-        public DataTable consulta(string str)
-        {
-            DataTable tl = new DataTable();
-            SqlDataAdapter sd = new SqlDataAdapter(str, conectar);
-            sd.Fill(tl);
-            return tl;
-        }
+        
 
         public bool checkinicio(string nombre, string pass)
         {

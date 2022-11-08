@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xn6VnDp6eCIVhL9PHk9HhHmEJzyvMhfv8LfSO970aVdDxCobwie8NWoVyBKV4BV0KDB1JHyL25iVWAYiCPfyfg==",
+  "dgSpecHash": "tVCoi9maluo2G0wcj1uTtP5meHwc1WXe5x4W/aHh47uUCworVFsKO9Zo9BRXTRxo8gIXhpMHQ/DtEDzrziJfdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\PROYECTO ALMACÉN RODRIGUEZ - copia\\PROYECTO ALMACÉN RODRIGUEZ\\PROYECTO ALMACÉN RODRIGUEZ.csproj",
+  "projectFilePath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\INTERFACE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Apolinar Rodríguez\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
     "C:\\Users\\Apolinar Rodríguez\\.nuget\\packages\\itext7\\7.2.3\\itext7.7.2.3.nupkg.sha512",
