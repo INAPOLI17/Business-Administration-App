@@ -1,0 +1,57 @@
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.exe
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.deps.json
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.runtimeconfig.json
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.csproj.AssemblyReference.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.INICIO.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.csproj.GenerateResource.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.AssemblyInfoInputs.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.AssemblyInfo.cs
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.csproj.CoreCompileInputs.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\refint\PROYECTO ALMACÉN RODRIGUEZ.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.genruntimeconfig.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\ref\PROYECTO ALMACÉN RODRIGUEZ.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.Properties.Resources.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.CLIENTE.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.ALMACEN.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.GESTOR_FACTURA.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.ADMINISTRACION.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.BALANCE_GENERAL.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.AGENDA.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.INICIOSESION.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.AJUSTEINIICIO.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.HOME.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO_ALMACÉN_RODRIGUEZ.RECUPERACION.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\obj\Debug\net6.0-windows\PROYECTO ALMACÉN RODRIGUEZ.csproj.CopyComplete
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.barcodes.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.forms.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.io.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.kernel.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.layout.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.pdfa.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.sign.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.styledxmlparser.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.svg.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itext.commons.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itextsharp.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\itextsharp.xmlworker.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\PROYECTO ALMACÉN RODRIGUEZ\PROYECTO ALMACÉN RODRIGUEZ\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
