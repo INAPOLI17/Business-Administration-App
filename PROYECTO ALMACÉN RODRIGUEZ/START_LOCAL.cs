@@ -12,15 +12,29 @@ namespace INTERFACE
         public INICIO()
         {
             InitializeComponent();
+            List<Object> ListTextBox = new List<Object>();
+            List<Object> ListRadio = new List<Object>();
 
+            ListTextBox.Add(txtProductos);
+            ListTextBox.Add(txtCANTIDADDETALLE);
+            ListTextBox.Add(cmbNAMECLIENT);
+            ListTextBox.Add(cmbDIRECTIONCLEINT);
+            ListTextBox.Add(txtDESCUENTO);
+            ListTextBox.Add(txtTotal);
+            ListTextBox.Add(txtTOTALNETO);
+
+            ListRadio.Add(rdbCREDITO);
+            ListRadio.Add(rdbEFECTIVO);
+            ListRadio.Add(rdbENTREGADO);
+            ListRadio.Add(rdbNOENTREGADO);
+
+            DataGridView STAR_LOCAL = new DataGridView();
+            function = new LOGICA(ListTextBox, ListRadio, STAR_LOCAL);
         }
 
-        CONEXION inicio = new CONEXION();
-        DATOSPRODUCTOS prdetalle = new DATOSPRODUCTOS();
-        DATOSFACTURA fa = new DATOSFACTURA();
-        List<Object> ListTextBox = new List<Object>();
-        List<Object> ListRadio = new List<Object>();
-        private LOGICA function = new LOGICA();
+
+      
+        private LOGICA function;
 
 
         private void INICIO_Load(object sender, EventArgs e)
@@ -36,18 +50,7 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
             dgvDETALLEFACTURA.Columns.Add("PRECIO", "PRECIO");
 
 
-            ListTextBox.Add(txtProductos);
-            ListTextBox.Add(txtCANTIDADDETALLE);
-            ListTextBox.Add(cmbNAMECLIENT);
-            ListTextBox.Add(cmbDIRECTIONCLEINT);
-            ListTextBox.Add(txtDESCUENTO);
-            ListTextBox.Add(txtTotal);
-            ListTextBox.Add(txtTOTALNETO);
-
-            ListRadio.Add(rdbCREDITO);
-            ListRadio.Add(rdbEFECTIVO);
-            ListRadio.Add(rdbENTREGADO);
-            ListRadio.Add(rdbNOENTREGADO);
+            
 
         }
 
@@ -213,63 +216,7 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             dgvDETALLEFACTURA.Rows.RemoveAt(dgvDETALLEFACTURA.CurrentRow.Index);
         }
 
-        private void ImpriumirFacura()
-        {
-
-            SaveFileDialog impReporte = new SaveFileDialog();
-            impReporte.FileName = fa.NAMECLIENTE + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
-
-            string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
-            paginaTexto = paginaTexto.Replace("@CLIENTE", fa.NAMECLIENTE);
-            paginaTexto = paginaTexto.Replace("@DIRECCION", fa.DIRECCION);
-            paginaTexto = paginaTexto.Replace("@ESTADO", fa.ESTADO);
-            paginaTexto = paginaTexto.Replace("@TIPO", fa.TIPOFACTURA);
-            paginaTexto = paginaTexto.Replace("@DESCUENTO", fa.DESCUENTO.ToString());
-            paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy"));
-
-            string filas = string.Empty;
-
-
-            for (int i = 0; i < dgvDETALLEFACTURA.Rows.Count - 1; i++)
-            {
-                filas += "<tr>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
-                filas += "</tr>";
-
-            }
-
-
-            paginaTexto = paginaTexto.Replace("@FILAS", filas);
-            paginaTexto = paginaTexto.Replace("@TOTAL", fa.TOTAL.ToString());
-            paginaTexto = paginaTexto.Replace("@Pagar", fa.PAGONETO.ToString());
-
-
-            if (impReporte.ShowDialog() == DialogResult.OK)
-            {
-                using (FileStream fileStream = new FileStream(impReporte.FileName, FileMode.Create))
-                {
-                    Document doc = new Document(PageSize.A4, 25, 25, 25, 25);
-
-                    PdfWriter writer = PdfWriter.GetInstance(doc, fileStream);
-
-                    doc.Open();
-                    doc.Add(new Phrase(""));
-
-                    using (StringReader reader = new StringReader(paginaTexto))
-                    {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, doc, reader);
-                    }
-
-                    doc.Close();
-                    fileStream.Close();
-
-                    MessageBox.Show("Factura generada");
-                }
-            }
-        }
+       
 
         private void btnCarga_Click(object sender, EventArgs e)
         {

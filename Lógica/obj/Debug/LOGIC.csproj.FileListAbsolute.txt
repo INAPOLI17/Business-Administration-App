@@ -1,0 +1,9 @@
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\Lógica.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\Lógica.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.AssemblyReference.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.CoreCompileInputs.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.CopyComplete
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.pdb

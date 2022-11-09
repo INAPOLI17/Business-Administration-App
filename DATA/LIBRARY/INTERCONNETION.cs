@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
-
 
 namespace DATA.LIBRARY.CLADATOS
 {
-    public class CONNETION : CheckSession
+    internal class INTERCONNETION
     {
-
-
-
+        public CheckSession Session = new CheckSession();
     }
 }

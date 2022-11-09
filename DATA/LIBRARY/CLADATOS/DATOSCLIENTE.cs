@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace PROYECTO_ALMACÉN_RODRIGUEZ
+namespace DATA.LIBRARY.CLADATOS
 {
     public class DATOSCLIENTE
     {

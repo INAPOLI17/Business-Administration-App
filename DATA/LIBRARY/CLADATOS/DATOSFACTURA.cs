@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace PROYECTO_ALMACÉN_RODRIGUEZ
+namespace DATA.LIBRARY.CLADATOS
 {
     public class DATOSFACTURA
     {

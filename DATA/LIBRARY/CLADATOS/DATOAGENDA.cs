@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROYECTO_ALMACÉN_RODRIGUEZ.CLADATOS
+namespace DATA.LIBRARY.CLADATOS
 {
     public  class DATOAGENDA
     {
