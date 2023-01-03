@@ -4,6 +4,7 @@ using iTextSharp.text.pdf;
 using iTextSharp.tool.xml;
 using System.IO;
 using LOGIC;
+using LOGIC.LIBRARY;
 
 namespace INTERFACE
 {
@@ -28,14 +29,14 @@ namespace INTERFACE
             ListRadio.Add(rdbENTREGADO);
             ListRadio.Add(rdbNOENTREGADO);
 
-            DataGridView STAR_LOCAL = new DataGridView();
-            function = new LOGICA(ListTextBox, ListRadio, STAR_LOCAL);
+            
+            function = new LOGICA(ListTextBox, ListRadio, rw );
         }
 
-
+        
       
         private LOGICA function;
-
+        DataGridView rw;
 
         private void INICIO_Load(object sender, EventArgs e)
         {
