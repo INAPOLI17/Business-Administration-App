@@ -9,8 +9,15 @@ using System.Windows.Forms;
 
 namespace Lógica.LIBRARY
 {
-    internal class Report
+    public class Report
     {
+        private DataGridView dgvDETALLEFACTURA;
+
+        public Report(DataGridView dgvDETALLEFACTURA)
+        {
+            this.dgvDETALLEFACTURA = sTAR_LOCAL;
+        }
+
         private void ImpriumirFacura()
         {
 
@@ -68,5 +75,5 @@ namespace Lógica.LIBRARY
                 }
             }
         }
-    }
 }
+
