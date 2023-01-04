@@ -30,13 +30,13 @@ namespace INTERFACE
             ListRadio.Add(rdbNOENTREGADO);
 
             
-            function = new LOGICA(ListTextBox, ListRadio, rw );
+            function = new LOGICA(ListTextBox, ListRadio, dgvDETALLEFACTURA );
         }
 
         
       
         private LOGICA function;
-        DataGridView rw;
+        
 
         private void INICIO_Load(object sender, EventArgs e)
         {

@@ -14,7 +14,7 @@ namespace Lógica.LIBRARY
         private DataGridView dgvDETALLEFACTURA;
 
 
-        public Report(DataGridView dgvDETALLEFACTURA)
+        public Report(DataGridView sTAR_LOCAL)
         {
             this.dgvDETALLEFACTURA = sTAR_LOCAL;
 
