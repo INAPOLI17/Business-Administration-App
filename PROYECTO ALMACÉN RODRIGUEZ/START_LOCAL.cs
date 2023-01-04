@@ -36,7 +36,7 @@ namespace INTERFACE
         
       
         private LOGICA function;
-        
+          
 
         private void INICIO_Load(object sender, EventArgs e)
         {
