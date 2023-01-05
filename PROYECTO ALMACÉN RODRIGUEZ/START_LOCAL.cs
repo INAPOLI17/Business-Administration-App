@@ -28,16 +28,12 @@ namespace INTERFACE
             ListRadio.Add(rdbEFECTIVO);
             ListRadio.Add(rdbENTREGADO);
             ListRadio.Add(rdbNOENTREGADO);
-
-            
-            function = new LOGICA(ListTextBox, ListRadio, dgvDETALLEFACTURA );
+         
+            function = new LOGICA(ListTextBox, ListRadio, dgvDETALLEFACTURA);
         }
-
-        
-      
+     
         private LOGICA function;
           
-
         private void INICIO_Load(object sender, EventArgs e)
         {
             BUSCAR(@"SELECT PRID.ID_PRODUCTO AS [ID],PRID.NOM_PRODUCTO AS [PRODUCTO],PRID.MED_PRODUCTO AS [MEDIDA], PRCA.CAN_PRODUCTO AS [CANTIDAD],
@@ -49,12 +45,7 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
             dgvDETALLEFACTURA.Columns.Add("CANTIDAD", "CANTIDAD");
             dgvDETALLEFACTURA.Columns.Add("MEDIDA", "MEDIDA");
             dgvDETALLEFACTURA.Columns.Add("PRECIO", "PRECIO");
-
-
-            
-
         }
-
 
         private void btnBuscarproducto_Click(object sender, EventArgs e)
         {

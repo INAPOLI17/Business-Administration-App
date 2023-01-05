@@ -30,7 +30,7 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
             DataGridViewRow rw = dgvBALANCEGENERAL.Rows[indice_fila];
             rw.Cells["FECHA"].Value = dateTimePicker1.Value.ToString("yyyy - MM - dd");
             rw.Cells["EFECTIVO"].Value =BALANCE(@$"SELECT ID.SUM_FACTURA AS [SUMA], CONVERT(date,FEC_FACTURA) AS FECHA FROM [FACTURA ID] AS ID 
-INNER JOIN FACTURA_ESTADO AS FE ON ID.ID_FACTURA = FE.ID_FACTURA WHERE FE.TIP_FACTURA = 'EFECTIVO' AND  ID.FEC_FACTURA = ' { dateTimePicker1.Value.ToString("yyyy-MM-dd") } ';");
+INNER JOIN FACTURA_ESTADO AS FE ON ID.ID_FACTURA = FE.ID_FACTURA WHERE FE.TIP_FACTURA = 'EFECTIVO' AND  ID.FEC_FACTURA = '"+ dateTimePicker1.Value.ToString("yyyy-MM-dd") +"'");
             rw.Cells["CREDITO"].Value = BALANCE(@$"SELECT ID.SUM_FACTURA AS [SUMA], CONVERT(date,FEC_FACTURA) AS FECHA FROM [FACTURA ID] AS ID INNER JOIN FACTURA_ESTADO AS FE ON ID.ID_FACTURA = 
 FE.ID_FACTURA WHERE FE.TIP_FACTURA = 'CREDITO' AND  ID.FEC_FACTURA = ' {dateTimePicker1.Value.ToString("yyyy-MM-dd")} ';");
             rw.Cells["TOTAL"].Value = int.Parse(rw.Cells["EFECTIVO"].Value.ToString())+ int.Parse(rw.Cells["CREDITO"].Value.ToString()) ;

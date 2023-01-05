@@ -38,9 +38,9 @@ namespace Lógica.LIBRARY {
                 }
             }
 
-        private bool reportFactura ( dgvDETALLEFACTURA) {
+        private bool reportFactura () {
             SaveFileDialog rpFactura = new SaveFileDialog();
-            rpFactura.FileName = fa.NAMECLIENTE + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
+            rpFactura.FileName = dgvDETALLEFACTURA.SelectedCells[0].Value.ToString() + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
             string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
             paginaTexto = paginaTexto.Replace("@CLIENTE", fa.NAMECLIENTE);
@@ -78,17 +78,11 @@ namespace Lógica.LIBRARY {
                 }
             }
 
-        private bool reportCliente ( dgvDETALLEFACTURA) {
+        private bool reportCliente () {
             SaveFileDialog rpCliente = new SaveFileDialog();
-            rpCliente.FileName = fa.NAMECLIENTE + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
+            rpCliente.FileName = "REPORTE DE CLIENTE--"+ DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
             string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
-            paginaTexto = paginaTexto.Replace("@CLIENTE", fa.NAMECLIENTE);
-            paginaTexto = paginaTexto.Replace("@DIRECCION", fa.DIRECCION);
-            paginaTexto = paginaTexto.Replace("@ESTADO", fa.ESTADO);
-            paginaTexto = paginaTexto.Replace("@TIPO", fa.TIPOFACTURA);
-            paginaTexto = paginaTexto.Replace("@DESCUENTO", fa.DESCUENTO.ToString());
-            paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy"));
 
             string filas = string.Empty;
 
@@ -99,14 +93,14 @@ namespace Lógica.LIBRARY {
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
                 filas += "</tr>";
 
                 }
 
 
             paginaTexto = paginaTexto.Replace("@FILAS", filas);
-            paginaTexto = paginaTexto.Replace("@TOTAL", fa.TOTAL.ToString());
-            paginaTexto = paginaTexto.Replace("@Pagar", fa.PAGONETO.ToString());
 
             try {
                 Imprimir(rpCliente, paginaTexto);
@@ -119,18 +113,12 @@ namespace Lógica.LIBRARY {
             }
 
 
-        private bool reportProducto ( dgvDETALLEFACTURA) {
+        private bool reportProducto () {
 
             SaveFileDialog rpProducto = new SaveFileDialog();
-            rpProducto.FileName = fa.NAMECLIENTE + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
+            rpProducto.FileName = "REPORTE DE INVENTARIO--" + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
             string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
-            paginaTexto = paginaTexto.Replace("@CLIENTE", fa.NAMECLIENTE);
-            paginaTexto = paginaTexto.Replace("@DIRECCION", fa.DIRECCION);
-            paginaTexto = paginaTexto.Replace("@ESTADO", fa.ESTADO);
-            paginaTexto = paginaTexto.Replace("@TIPO", fa.TIPOFACTURA);
-            paginaTexto = paginaTexto.Replace("@DESCUENTO", fa.DESCUENTO.ToString());
-            paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy"));
 
             string filas = string.Empty;
 
@@ -141,14 +129,15 @@ namespace Lógica.LIBRARY {
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
                 filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
                 filas += "</tr>";
 
                 }
 
 
             paginaTexto = paginaTexto.Replace("@FILAS", filas);
-            paginaTexto = paginaTexto.Replace("@TOTAL", fa.TOTAL.ToString());
-            paginaTexto = paginaTexto.Replace("@Pagar", fa.PAGONETO.ToString());
+
 
             try {
                 Imprimir(rpProducto, paginaTexto);

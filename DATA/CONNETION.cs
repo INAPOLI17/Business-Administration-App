@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using System.Data.SqlClient;
+﻿using DATA.LIBRARY.CLADATOS;
 
 
-namespace DATA.LIBRARY.CLADATOS
-{
-    public class CONNETION : CheckSession
-    {
+namespace DATA {
+    public class CONNETION : CheckSession {
 
 
 
