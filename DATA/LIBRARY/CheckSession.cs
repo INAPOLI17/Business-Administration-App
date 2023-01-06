@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using DATA.LIBRARY.CLADATOS;
+using DATABASE.LIBRARY.CLADATOS;
 
 
-namespace DATA {
-    public class CheckSession : CRUD {
+namespace DATABASE {
+    public class CheckSession : ClassSearch {
 
         public bool checkinicio ( string nombre, string pass ) {
 
@@ -22,8 +22,6 @@ namespace DATA {
                 return false;
                 }
             }
-
-
 
         public bool LlenadoCombo ( ComboBox combobox, string strsql, string codigos, string nombre ) {
             DataTable dt = new DataTable();

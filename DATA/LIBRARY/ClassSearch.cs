@@ -1,8 +1,9 @@
-﻿using DATA.LIBRARY.CLADATOS;
+﻿using DATABASE.LIBRARY.CLADATOS;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
-namespace DATA {
-    public class ClassSearch {
+namespace DATABASE {
+    public class ClassSearch:CRUD {
 
         Dictionary<string, string> QUERYS = new Dictionary<string, string>()
         {
@@ -25,7 +26,11 @@ namespace DATA {
         FAES.EST_FACTURA AS [ESTADO], FAES.TIP_FACTURA AS [TIPO], FAID.TOT_FACTURA AS [TOTAL] FROM [FACTURA ID] AS FAID INNER JOIN FACTURA_DIRECCION AS FADI ON 
         FAID.ID_FACTURA = FADI.ID_FACTURA INNER JOIN FACTURA_ESTADO AS FAES ON FAID.ID_FACTURA = FAES.ID_FACTURA " },
 
-
         };
+
+        public void SearhData (ref DataGridView model, string resource ) {
+            model.DataSource = consulta(resource);
+
+            }
     }
 }

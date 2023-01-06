@@ -1,7 +1,5 @@
-﻿using DATA.LIBRARY.CLADATOS;
-
-
-namespace DATA {
+﻿
+namespace DATABASE {
     public class CONNETION : CheckSession {
 
 

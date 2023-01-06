@@ -1,6 +1,6 @@
-﻿using DATA.LIBRARY.CLADATOS;
+﻿using DATABASE.LIBRARY.CLADATOS;
 
-namespace DATA {
+namespace DATABASE {
     public class INTERCONNETION {
        
         }

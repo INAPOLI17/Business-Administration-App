@@ -11,11 +11,6 @@ namespace Lógica.LIBRARY {
         private DataGridView dgvDETALLEFACTURA;
 
 
-        public Report ( DataGridView sTAR_LOCAL ) {
-            this.dgvDETALLEFACTURA = sTAR_LOCAL;
-
-            }
-
         private void Imprimir ( SaveFileDialog impReporte, string paginaTexto ) {
             if (impReporte.ShowDialog() == DialogResult.OK) {
                 using (FileStream fileStream = new FileStream(impReporte.FileName, FileMode.Create)) {

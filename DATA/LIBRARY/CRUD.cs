@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using DATA.LIBRARY.CLADATOS;
+using DATABASE.LIBRARY.CLADATOS;
 
 
-namespace DATA {
+namespace DATABASE {
     public class CRUD {
         SqlConnection conectar = new SqlConnection(@"Data Source=DESKTOP-QUV81SK;Initial Catalog=ALMACEN_RODRIGUEZ;Integrated Security=True");
 
@@ -15,7 +15,7 @@ namespace DATA {
             return tl;
             }
 
-        public void DATOSCLIENTE ( DATOSCLIENTE CLIENTE, string clave ) {
+        private void DATOSCLIENTE ( DATOSCLIENTE CLIENTE, string clave ) {
 
 
             switch (clave) {
@@ -51,7 +51,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void DATOSALMACEN ( DATOSPRODUCTOS ALMACEN, string clave ) {
+        private void DATOSALMACEN ( DATOSPRODUCTOS ALMACEN, string clave ) {
 
             conectar.Open();
             switch (clave) {
@@ -101,7 +101,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void DATOSFACTURA ( DATOSFACTURA FACTURA, string clave ) {
+        private void DATOSFACTURA ( DATOSFACTURA FACTURA, string clave ) {
 
             conectar.Open();
             switch (clave) {
@@ -161,7 +161,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void DATOSDETALLE ( DATOSDETALLE DETALLE, string clave ) {
+        private void DATOSDETALLE ( DATOSDETALLE DETALLE, string clave ) {
             conectar.Open();
 
             switch (clave) {
@@ -194,7 +194,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void DATOSUSUARIO ( int ID, string NAMEUSER, string PASSWORD ) {
+        private void DATOSUSUARIO ( int ID, string NAMEUSER, string PASSWORD ) {
             SqlCommand user = new SqlCommand("ADDUSER", conectar);
             conectar.Open();
             user.CommandType = CommandType.StoredProcedure;
@@ -210,7 +210,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void PAGO ( int cliente, int factura ) {
+        private void PAGO ( int cliente, int factura ) {
             SqlCommand cmd = new SqlCommand("ADDHISTORIAL", conectar);
             conectar.Open();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -224,7 +224,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void AGENDA ( DATOAGENDA AG, string clave ) {
+        private void AGENDA ( DATOAGENDA AG, string clave ) {
 
             conectar.Open();
             switch (clave) {
@@ -256,7 +256,7 @@ namespace DATA {
             conectar.Close();
             }
 
-        public void AJUSTE ( string us, string pass ) {
+        private void AJUSTE ( string us, string pass ) {
             SqlCommand cmd = new SqlCommand("ADDUSER", conectar);
             conectar.Open();
             cmd.CommandType = CommandType.StoredProcedure;
@@ -269,7 +269,7 @@ namespace DATA {
 
             conectar.Close();
             }
-        public void ControlCantidadProductos ( int ID, int Cantidad ) {
+        private void ControlCantidadProductos ( int ID, int Cantidad ) {
 
             DATOSPRODUCTOS dp = new DATOSPRODUCTOS();
             DataTable dt = new DataTable();

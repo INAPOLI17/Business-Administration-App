@@ -1,0 +1,9 @@
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\bin\Debug\DATA.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\bin\Debug\DATA.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\obj\Debug\DATABASE.csproj.AssemblyReference.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\obj\Debug\DATABASE.csproj.CoreCompileInputs.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\obj\Debug\DATABASE.csproj.CopyComplete
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\obj\Debug\DATA.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\DATA\obj\Debug\DATA.pdb
