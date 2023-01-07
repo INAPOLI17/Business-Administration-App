@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DATA.LIBRARY.CLADATOS
+namespace DATABASE.LIBRARY.CLADATOS
 {
     public  class DATOAGENDA
     {

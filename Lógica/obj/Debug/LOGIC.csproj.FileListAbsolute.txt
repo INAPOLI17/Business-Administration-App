@@ -7,3 +7,5 @@ C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.CopyComplete
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.dll
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.Properties.Resources.resources
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.GenerateResource.cache

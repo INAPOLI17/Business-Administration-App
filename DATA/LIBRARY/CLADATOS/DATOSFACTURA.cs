@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-namespace DATA.LIBRARY.CLADATOS
+namespace DATABASE.LIBRARY.CLADATOS
 {
     public class DATOSFACTURA
     {

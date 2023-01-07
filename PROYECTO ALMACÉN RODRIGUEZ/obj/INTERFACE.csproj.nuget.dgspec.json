@@ -4,6 +4,21 @@
     "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\PROYECTO ALMACÉN RODRIGUEZ\\INTERFACE.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\DATA\\DATABASE.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\DATA\\DATABASE.csproj",
+        "projectName": "DATABASE",
+        "projectPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\DATA\\DATABASE.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\Lógica\\LOGIC.csproj": {
       "restore": {
         "projectUniqueName": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\Lógica\\LOGIC.csproj",
@@ -11,7 +26,11 @@
         "projectPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\Lógica\\LOGIC.csproj",
         "frameworks": {
           "net472": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\DATA\\DATABASE.csproj": {
+                "projectPath": "C:\\Users\\Apolinar Rodríguez\\OneDrive\\Documentos\\GitHub\\Business-Administration-App\\DATA\\DATABASE.csproj"
+              }
+            }
           }
         }
       },

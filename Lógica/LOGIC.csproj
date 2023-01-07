@@ -81,5 +81,11 @@
   <ItemGroup>
     <None Include="Resources\reportePRODUCTO.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DATA\DATABASE.csproj">
+      <Project>{b70989a8-1446-4a4c-970c-bb01c049f04a}</Project>
+      <Name>DATABASE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

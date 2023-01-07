@@ -1319,8 +1319,20 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "DATABASE/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DATABASE.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DATABASE.dll": {}
+        }
+      },
       "LOGIC/1.0.0": {
         "type": "project",
+        "dependencies": {
+          "DATABASE": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/LOGIC.dll": {}
         },
@@ -4890,6 +4902,11 @@
         "system.xml.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xmldocument.nuspec"
       ]
+    },
+    "DATABASE/1.0.0": {
+      "type": "project",
+      "path": "../DATA/DATABASE.csproj",
+      "msbuildProject": "../DATA/DATABASE.csproj"
     },
     "LOGIC/1.0.0": {
       "type": "project",
