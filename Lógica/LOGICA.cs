@@ -3,7 +3,8 @@ using System.Windows.Forms;
 using DATABASE;
 using DATABASE.LIBRARY.CLADATOS;
 using Lógica.LIBRARY;
-
+using System.Reflection;
+using System;
 
 namespace LOGIC {
     public class LOGICA:Report {
@@ -24,10 +25,26 @@ namespace LOGIC {
 
         }
 
-        private void GenerateBill ( List<object> DataForBill) {
+        public void GenerateBill ( List<object> DataForBill) {
             DATOSFACTURA fa = new DATOSFACTURA();
+            DATOSDETALLE de = new DATOSDETALLE();
 
+            fa.NAMECLIENTE = DataForBill[0].ToString();
+            fa.DIRECCION = DataForBill[1].ToString();
+            if (DataForBill[2].Equals(true)) {
+                fa.ESTADO = "NO ENTREGADA";
+                } else {
+                fa.ESTADO = "ENTREGADO";
+                }
+            if (DataForBill[4].Equals(true)) {
+                fa.TIPOFACTURA = "CREDITO";
+                } else {
+                fa.TIPOFACTURA = "EFECTIVO";
+                }
         }
+
+
+
 
     }
 }

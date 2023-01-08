@@ -107,13 +107,23 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             }
 
         private void btnGenerar_Click ( object sender, EventArgs e ) {
+            List<object> listDataBill = new List<object>();
+            listDataBill.Add(cmbNAMECLIENT);
+            listDataBill.Add(cmbDIRECTIONCLEINT);
+            listDataBill.Add(rdbNOENTREGADO);
+            listDataBill.Add (rdbENTREGADO);
+            listDataBill.Add(rdbCREDITO);
+            listDataBill.Add(rdbEFECTIVO);
+            listDataBill.Add(dgvDETALLEFACTURA);
+
+            function.GenerateBill( listDataBill );
+            /*
             fa.ID = inicio.GENERARID("FACTURA");
             fa.NAMECLIENTE = cmbNAMECLIENT.Text;
+
             if (cmbNAMECLIENT.ValueMember == null) {
                 fa.IDCLIENTE = 0000;
-                } else {
-                //fa.IDCLIENTE = int.Parse(comboBox1.ValueMember.ToString());
-                }
+                } 
 
             fa.DIRECCION = cmbDIRECTIONCLEINT.Text;
             if (rdbNOENTREGADO.Checked) {
@@ -152,7 +162,7 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             }
 
         public void ActualizarCantidadProductos ( ) {
-
+            */
             }
 
         private void btnLimpiar_Click ( object sender, EventArgs e ) {
