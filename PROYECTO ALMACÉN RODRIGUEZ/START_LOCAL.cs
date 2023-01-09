@@ -21,8 +21,7 @@ namespace INTERFACE {
             ListRadio.Add(rdbNOENTREGADO);
 
             function = new LOGICA(ListTextBox, 
-                                    ListRadio, 
-                                    dgvDETALLEFACTURA);
+                                    ListRadio);
             }
 
         private LOGICA function;
@@ -110,13 +109,12 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             List<object> listDataBill = new List<object>();
             listDataBill.Add(cmbNAMECLIENT);
             listDataBill.Add(cmbDIRECTIONCLEINT);
-            listDataBill.Add(rdbNOENTREGADO);
-            listDataBill.Add (rdbENTREGADO);
-            listDataBill.Add(rdbCREDITO);
-            listDataBill.Add(rdbEFECTIVO);
-            listDataBill.Add(dgvDETALLEFACTURA);
+            listDataBill.Add(StatusFactura);
+            listDataBill.Add (TypeFactura);
+            listDataBill.Add(txtDESCUENTO);
 
-            function.GenerateBill( listDataBill );
+
+            function.GenerateBill( listDataBill, dgvDETALLEFACTURA );
             /*
             fa.ID = inicio.GENERARID("FACTURA");
             fa.NAMECLIENTE = cmbNAMECLIENT.Text;
@@ -219,6 +217,23 @@ FROM CLIENTE_DIRECCION WHERE ID_CLIENTE LIKE'" + cmbNAMECLIENT.SelectedValue.ToS
 
         private void SumaTotal ( params object[] valores ) {
             fa.TOTAL += int.Parse(valores[0].ToString()) * int.Parse(valores[1].ToString());
+            }
+
+        private string TypeFactura ( ) {
+
+            if (rdbCREDITO.Checked) {
+                return "CREDITO";
+                }else {
+                return "EFECTIVO";
+                }
+            }
+
+        private string StatusFactura ( ) {
+            if (rdbNOENTREGADO.Checked) {
+                return "NO ENTREGADO";
+                } else {
+                return "ENTREGADO";
+                }
             }
         }
     }

@@ -4,11 +4,10 @@ using iTextSharp.tool.xml;
 using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace Lógica.LIBRARY {
     public class Report {
-
-        private DataGridView dgvDETALLEFACTURA;
 
 
         private void Imprimir ( SaveFileDialog impReporte, string paginaTexto ) {
@@ -33,27 +32,27 @@ namespace Lógica.LIBRARY {
                 }
             }
 
-        private bool reportFactura () {
+        public bool reportFactura (DataGridView report,List<object> DataForReport ) {
             SaveFileDialog rpFactura = new SaveFileDialog();
-            rpFactura.FileName = dgvDETALLEFACTURA.SelectedCells[0].Value.ToString() + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
+            rpFactura.FileName = report.SelectedCells[0].Value.ToString() + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
             string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
-            paginaTexto = paginaTexto.Replace("@CLIENTE", fa.NAMECLIENTE);
-            paginaTexto = paginaTexto.Replace("@DIRECCION", fa.DIRECCION);
-            paginaTexto = paginaTexto.Replace("@ESTADO", fa.ESTADO);
-            paginaTexto = paginaTexto.Replace("@TIPO", fa.TIPOFACTURA);
-            paginaTexto = paginaTexto.Replace("@DESCUENTO", fa.DESCUENTO.ToString());
+            paginaTexto = paginaTexto.Replace("@CLIENTE", DataForReport[0]);
+            paginaTexto = paginaTexto.Replace("@DIRECCION", DataForReport[1]);
+            paginaTexto = paginaTexto.Replace("@ESTADO", DataForReport[2]);
+            paginaTexto = paginaTexto.Replace("@TIPO", DataForReport[3]);
+            paginaTexto = paginaTexto.Replace("@DESCUENTO", DataForReport[4]);
             paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy"));
 
             string filas = string.Empty;
 
 
-            for (int i = 0; i < dgvDETALLEFACTURA.Rows.Count - 1; i++) {
+            for (int i = 0; i < report.Rows.Count - 1; i++) {
                 filas += "<tr>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
                 filas += "</tr>";
 
                 }
@@ -73,23 +72,23 @@ namespace Lógica.LIBRARY {
                 }
             }
 
-        private bool reportCliente () {
+        public bool reportCliente (DataGridView report ) {
             SaveFileDialog rpCliente = new SaveFileDialog();
             rpCliente.FileName = "REPORTE DE CLIENTE--"+ DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
-            string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
+            string paginaTexto = Properties.Resources.reporteCLIENTE.ToString();
 
             string filas = string.Empty;
 
 
-            for (int i = 0; i < dgvDETALLEFACTURA.Rows.Count - 1; i++) {
+            for (int i = 0; i < report.Rows.Count - 1; i++) {
                 filas += "<tr>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
                 filas += "</tr>";
 
                 }
@@ -108,24 +107,24 @@ namespace Lógica.LIBRARY {
             }
 
 
-        private bool reportProducto () {
+        public bool reportProducto (DataGridView report ) {
 
             SaveFileDialog rpProducto = new SaveFileDialog();
             rpProducto.FileName = "REPORTE DE INVENTARIO--" + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
-            string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
+            string paginaTexto = Properties.Resources.reportePRODUCTO.ToString();
 
             string filas = string.Empty;
 
 
-            for (int i = 0; i < dgvDETALLEFACTURA.Rows.Count - 1; i++) {
+            for (int i = 0; i < report.Rows.Count - 1; i++) {
                 filas += "<tr>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
-                filas += "<td>" + dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRODUCTO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["MEDIDA"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["CANTIDAD"].Value.ToString() + "</td>";
+                filas += "<td>" + report.Rows[i].Cells["PRECIO"].Value.ToString() + "</td>";
                 filas += "</tr>";
 
                 }
