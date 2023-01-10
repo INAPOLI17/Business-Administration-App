@@ -27,15 +27,8 @@ namespace INTERFACE {
         private LOGICA function;
 
         private void INICIO_Load ( object sender, EventArgs e ) {
-            BUSCAR(@"SELECT PRID.ID_PRODUCTO AS [ID],PRID.NOM_PRODUCTO AS [PRODUCTO],PRID.MED_PRODUCTO AS [MEDIDA], PRCA.CAN_PRODUCTO AS [CANTIDAD],
-PRPR.PVEN_PRODUCTO AS [PRECIO] FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCTO= PRCA.ID_PRODUCTO  INNER JOIN 
-PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRODUCTO > '0';");
-
-            dgvDETALLEFACTURA.Columns.Add("ID", "ID");
-            dgvDETALLEFACTURA.Columns.Add("PRODUCTO", "PRODUCTO");
-            dgvDETALLEFACTURA.Columns.Add("CANTIDAD", "CANTIDAD");
-            dgvDETALLEFACTURA.Columns.Add("MEDIDA", "MEDIDA");
-            dgvDETALLEFACTURA.Columns.Add("PRECIO", "PRECIO");
+            function.ShowData();
+            
             }
 
         private void btnBuscarproducto_Click ( object sender, EventArgs e ) {
@@ -83,20 +76,21 @@ FROM CLIENTE_DIRECCION WHERE ID_CLIENTE LIKE'" + cmbNAMECLIENT.SelectedValue.ToS
 
         private void button1_Click ( object sender, EventArgs e ) {
 
+
             if (int.Parse(txtCANTIDADDETALLE.Text) > int.Parse(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString())) {
                 MessageBox.Show("La cantidad indicada sobrepasa el valor de existenia");
                 } else {
-                int indice_fila = dgvDETALLEFACTURA.Rows.Add();
-                DataGridViewRow rw = dgvDETALLEFACTURA.Rows[indice_fila];
-                rw.Cells["ID"].Value = prdetalle.ID.ToString();
-                rw.Cells["PRODUCTO"].Value = prdetalle.NAMEPRODUCTO.ToString();
-                rw.Cells["CANTIDAD"].Value = txtCANTIDADDETALLE.Text;
-                rw.Cells["MEDIDA"].Value = prdetalle.MEDIDA.ToString();
-                rw.Cells["PRECIO"].Value = prdetalle.PRECIOVENTA.ToString();
-                SumaTotal(prdetalle.PRECIOVENTA, txtCANTIDADDETALLE.Text);
+                List<string> detalles = new List<string>;
+                detalles.Add(dgvADDPRODUCTOS.SelectedCells[0].Value.ToString());
+                detalles.Add(dgvADDPRODUCTOS.SelectedCells[1].Value.ToString());
+                detalles.Add(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString());
+                detalles.Add(dgvADDPRODUCTOS.SelectedCells[2].Value.ToString());
+                detalles.Add(dgvADDPRODUCTOS.SelectedCells[4].Value.ToString());
+                
+                function.RowFill(detalles);
+                function.ShowData();
 
-                txtTotal.Text = fa.TOTAL.ToString();
-                txtTOTALNETO.Text = Convert.ToString(fa.TOTAL - int.Parse(txtDESCUENTO.Text));
+                txtTOTALNETO.Text;
                 txtCANTIDADDETALLE.Clear();
                 }
 
@@ -111,7 +105,8 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             listDataBill.Add(cmbDIRECTIONCLEINT);
             listDataBill.Add(StatusFactura);
             listDataBill.Add (TypeFactura);
-            listDataBill.Add(txtDESCUENTO);
+            listDataBill.Add(txtDESCUENTO)
+                ;
 
 
             function.GenerateBill( listDataBill, dgvDETALLEFACTURA );
@@ -215,9 +210,6 @@ FROM CLIENTE_DIRECCION WHERE ID_CLIENTE LIKE'" + cmbNAMECLIENT.SelectedValue.ToS
                 }
             }
 
-        private void SumaTotal ( params object[] valores ) {
-            fa.TOTAL += int.Parse(valores[0].ToString()) * int.Parse(valores[1].ToString());
-            }
 
         private string TypeFactura ( ) {
 

@@ -34,17 +34,20 @@ namespace Lógica.LIBRARY {
 
         public bool reportFactura (DataGridView report,List<object> DataForReport ) {
             SaveFileDialog rpFactura = new SaveFileDialog();
+            string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
+            string filas = string.Empty;
+            int total = 0;
             rpFactura.FileName = report.SelectedCells[0].Value.ToString() + DateTime.Now.ToString("dd-mm-yyyyHHmmss") + ".pdf";
 
-            string paginaTexto = Properties.Resources.reporteFACTURA.ToString();
-            paginaTexto = paginaTexto.Replace("@CLIENTE", DataForReport[0]);
-            paginaTexto = paginaTexto.Replace("@DIRECCION", DataForReport[1]);
-            paginaTexto = paginaTexto.Replace("@ESTADO", DataForReport[2]);
-            paginaTexto = paginaTexto.Replace("@TIPO", DataForReport[3]);
-            paginaTexto = paginaTexto.Replace("@DESCUENTO", DataForReport[4]);
+            
+            paginaTexto = paginaTexto.Replace("@CLIENTE", DataForReport[0].ToString());
+            paginaTexto = paginaTexto.Replace("@DIRECCION", DataForReport[1].ToString());
+            paginaTexto = paginaTexto.Replace("@ESTADO", DataForReport[2].ToString());
+            paginaTexto = paginaTexto.Replace("@TIPO", DataForReport[3].ToString());
+            paginaTexto = paginaTexto.Replace("@DESCUENTO", DataForReport[4].ToString());
             paginaTexto = paginaTexto.Replace("@Fecha", DateTime.Now.ToString("dd-mm-yyyy"));
 
-            string filas = string.Empty;
+           
 
 
             for (int i = 0; i < report.Rows.Count - 1; i++) {
@@ -59,7 +62,7 @@ namespace Lógica.LIBRARY {
 
 
             paginaTexto = paginaTexto.Replace("@FILAS", filas);
-            paginaTexto = paginaTexto.Replace("@TOTAL", fa.TOTAL.ToString());
+            paginaTexto = paginaTexto.Replace("@TOTAL", );
             paginaTexto = paginaTexto.Replace("@Pagar", fa.PAGONETO.ToString());
 
             try {
