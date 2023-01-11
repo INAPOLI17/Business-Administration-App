@@ -46,7 +46,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.BTNBUSCAR = new System.Windows.Forms.Button();
             this.cmbNAMECLIENT = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -260,7 +259,6 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.BTNBUSCAR);
             this.panel5.Controls.Add(this.cmbNAMECLIENT);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -268,18 +266,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(569, 42);
             this.panel5.TabIndex = 12;
-            // 
-            // BTNBUSCAR
-            // 
-            this.BTNBUSCAR.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.BTNBUSCAR.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BTNBUSCAR.Location = new System.Drawing.Point(452, 7);
-            this.BTNBUSCAR.Name = "BTNBUSCAR";
-            this.BTNBUSCAR.Size = new System.Drawing.Size(96, 30);
-            this.BTNBUSCAR.TabIndex = 2;
-            this.BTNBUSCAR.Text = "BUSCAR";
-            this.BTNBUSCAR.UseVisualStyleBackColor = true;
-            this.BTNBUSCAR.Click += new System.EventHandler(this.BTNBUSCAR_Click);
             // 
             // cmbNAMECLIENT
             // 
@@ -289,10 +275,11 @@
             this.cmbNAMECLIENT.FormattingEnabled = true;
             this.cmbNAMECLIENT.Location = new System.Drawing.Point(181, 7);
             this.cmbNAMECLIENT.Name = "cmbNAMECLIENT";
-            this.cmbNAMECLIENT.Size = new System.Drawing.Size(255, 30);
+            this.cmbNAMECLIENT.Size = new System.Drawing.Size(367, 30);
             this.cmbNAMECLIENT.TabIndex = 1;
             this.cmbNAMECLIENT.Text = " ";
             this.cmbNAMECLIENT.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbNAMECLIENT.TextChanged += new System.EventHandler(this.cmbNAMECLIENT_TextChanged);
             // 
             // label7
             // 
@@ -715,6 +702,5 @@
         private Label label3;
         private DataGridView dgvDETALLEFACTURA;
         private Button btnCarga;
-        private Button BTNBUSCAR;
     }
 }

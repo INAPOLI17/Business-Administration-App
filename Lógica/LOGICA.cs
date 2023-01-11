@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using DATABASE;
 using DATABASE.LIBRARY.CLADATOS;
@@ -72,12 +73,55 @@ namespace LOGIC {
                 brigdetodata.ControlCantidadProductos (de.IDPRODUCTO, de.CANTIDAD);
                 }
 
-            reportFactura(dgvDETALLEFACTURA, );
+            reportFactura(dgvDETALLEFACTURA, DataForBill);
             }
         
         public void PlusTotal ( int precio) {
             fa.TOTAL += precio;
             }
+
+        public bool SearchClientName (ref ComboBox Name, ref ComboBox Direction ) {
+            try {
+                if (brigdetodata.LlenadoCombo(Name, @"SELECT ID_CLIENTE, NOM_CLIENTE
+                    FROM CLIENTE_ID WHERE NOM_CLIENTE LIKE '%" + Name.Text + "%'", "ID_CLIENTE", "NOM_CLIENTE") && Name.Text != " ") {
+                    brigdetodata.LlenadoCombo(Direction, @"SELECT *
+                    FROM CLIENTE_DIRECCION WHERE ID_CLIENTE LIKE'" + Name.SelectedValue.ToString() + "'", "ID_CLIENTE", "DIR_CLIENTE");
+                    fa.IDCLIENTE = int.Parse(Name.SelectedValue.ToString());
+                    Name.Text = Name.SelectedText.ToString();
+                    SearchClientDirection (Name.Text, ref Direction);
+
+                    return true; 
+                    } 
+                else {
+                    fa.IDCLIENTE = 0;
+                    Name.ValueMember = "0";
+                    throw new ArgumentNullException(nameof(Name));
+
+                    }
+                }
+            catch (ArgumentNullException) {
+                MessageBox.Show("Cliente no encontrado");
+                return false;
+                }
+
+            }
+
+        private void SearchClientDirection ( String NameClient, ref ComboBox Direction) {
+
+            try {
+                if (NameClient != null) {
+
+                    brigdetodata.LlenadoCombo(Direction, @"SELECT *
+FROM CLIENTE_DIRECCION WHERE ID_CLIENTE LIKE'" + NameClient + "'", "ID_CLIENTE", "DIR_CLIENTE");
+                    } else {
+                    throw new ArgumentNullException(nameof(NameClient));
+                    }
+                }
+            catch (ArgumentNullException) {
+                MessageBox.Show("Cliente no cuenta con una dirección");
+                }
+            
+        }
 
 
 
