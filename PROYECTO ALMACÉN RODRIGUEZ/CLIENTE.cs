@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LOGIC;
 
 namespace PROYECTO_ALMACÉN_RODRIGUEZ
 {
@@ -15,10 +16,18 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
         public CLIENTE()
         {
             InitializeComponent();
+            Data = new List<object>();
+            Data.Add(TXTID);
+            Data.Add(txtNOMBRECLIENTE);
+            Data.Add(txtApellido);
+            Data.Add(txtDIRECCION);
+            Data.Add(txtTELEFONO);
+
+            function = new LOGICA();
         }
 
-        CONEXION cn = new CONEXION();
-        DATOSCLIENTE dn = new DATOSCLIENTE();
+        private LOGICA function;
+        private List<object> Data; 
 
         private void btnATRASCLIENTE_Click(object sender, EventArgs e)
         {
@@ -62,30 +71,22 @@ FROM CLIENTE_ID AS CI INNER JOIN CLIENTE_DIRECCION AS CD ON CI.ID_CLIENTE = CD.I
 
         private void btnLIMPIARCLIENTE_Click(object sender, EventArgs e)
         {
-            TXTID.Text = cn.GENERARID("CLIENTE").ToString();
-            txtNOMBRECLIENTE.Text = string.Empty;
-            txtApellido.Text= string.Empty;
-            txtDIRECCION.Text= string.Empty;
-            txtTELEFONO.Text= string.Empty;
+            foreach (var i in Data) {
+                Data[i].Text = string.Empty;
+                }
         }
 
         private void btnGUARDARCLIENTE_Click(object sender, EventArgs e)
         {
-            dn.ID = int.Parse(TXTID.Text);
-            dn.NAMECLIENTE = txtNOMBRECLIENTE.Text;
-            dn.APELLIDO = txtApellido.Text; 
-            dn.DIRECCION = txtDIRECCION.Text;
-            dn.TELEFONO = txtTELEFONO.Text;
-
-            cn.DATOSCLIENTE(dn, "AÑADIR");
+            function.client.SaveDataClient(Data);
             BUSCAR(@"SELECT CI.ID_CLIENTE AS [ID], CI.NOM_CLIENTE AS [NOMBRE], CI.APE_CLIENTE AS [APELLIDO], CD.DIR_CLIENTE, CT.TEL_CLIENTE AS [TELEFONO], CI.FEC_CLIENTE AS [FECHA]
 FROM CLIENTE_ID AS CI INNER JOIN CLIENTE_DIRECCION AS CD ON CI.ID_CLIENTE = CD.ID_CLIENTE INNER JOIN CLIENTE_TELEFONO AS CT ON CI.ID_CLIENTE = CT.ID_CLIENTE");
         }
 
         private void btnBORRARCLIENTE_Click(object sender, EventArgs e)
         {
-            dn.ID = int.Parse(dgvCLIENTES.SelectedCells[0].Value.ToString());
-            cn.DATOSCLIENTE(dn, "BORRAR");
+
+            function.client.DeleteDataClient(int.Parse(dgvCLIENTES.SelectedCells[0].Value.ToString()));
             BUSCAR(@"SELECT CI.ID_CLIENTE AS [ID], CI.NOM_CLIENTE AS [NOMBRE], CI.APE_CLIENTE AS [APELLIDO], CD.DIR_CLIENTE, CT.TEL_CLIENTE AS [TELEFONO], 
 CI.FEC_CLIENTE AS [FECHA] FROM CLIENTE_ID AS CI INNER JOIN CLIENTE_DIRECCION AS CD ON CI.ID_CLIENTE = CD.ID_CLIENTE INNER JOIN CLIENTE_TELEFONO AS CT ON 
 CI.ID_CLIENTE = CT.ID_CLIENTE");

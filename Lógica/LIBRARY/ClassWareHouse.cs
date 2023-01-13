@@ -41,6 +41,9 @@ namespace Lógica.LIBRARY {
             return true;
             }
 
-        public void CleanPlaces ( ) { }
+        public void DeleteDataProducts ( int id) {
+            dp.ID = id;
+            bridgetobd.DATOSALMACEN(dp, "BORRAR");
+            }
     }
 }

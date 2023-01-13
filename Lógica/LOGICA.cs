@@ -13,6 +13,7 @@ namespace LOGIC {
         private List<object> listRadio1;
         public ClassBill Bill = new ClassBill();
         public ClassWareHouse wareHouse = new ClassWareHouse();
+        public ClassClient client = new ClassClient();
 
 
         public LOGICA ( ) {

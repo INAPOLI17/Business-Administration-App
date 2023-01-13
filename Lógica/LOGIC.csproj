@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LIBRARY\ClassBill.cs" />
+    <Compile Include="LIBRARY\ClassClient.cs" />
     <Compile Include="LIBRARY\ClassWareHouse.cs" />
     <Compile Include="LIBRARY\Report.cs" />
     <Compile Include="LOGICA.cs" />
