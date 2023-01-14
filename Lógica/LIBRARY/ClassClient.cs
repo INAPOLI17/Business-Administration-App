@@ -32,5 +32,6 @@ namespace Lógica.LIBRARY {
             cn.ID = id;
             bridgetobd.DATOSCLIENTE(cn, "BORRAR");
             }
+
         }
     }

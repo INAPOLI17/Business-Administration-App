@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PROYECTO_ALMACÉN_RODRIGUEZ.CLADATOS;
+using LOGIC;
 
 namespace PROYECTO_ALMACÉN_RODRIGUEZ
 {
@@ -16,10 +16,13 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
         public AGENDA()
         {
             InitializeComponent();
-        }
+            schedule = new List<object>();
+            function = new LOGICA();
+            }
 
-        CONEXION cn = new CONEXION();
-        DATOAGENDA dag = new DATOAGENDA();
+        private List<object> schedule;
+        private LOGICA function;
+
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -38,20 +41,21 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
 
         private void btnGUARDARAGENDA_Click(object sender, EventArgs e)
         {
-            dag.IDAGENDA = int.Parse(txtID.Text);
-            dag.NOMBREAGENDA = txtNOMBREAGENDA.Text;
-            dag.APELLIDOAGENDA = txtAPELLIDOAGENDA.Text;
-            dag.DIRECCIONAGENDA = txtDIRECCIONAGENDA.Text;
-            dag.TELEFONO = (txtTELEFONO.Text);
+            schedule.Add(txtID);
+            schedule.Add(txtNOMBREAGENDA);
+            schedule.Add(txtAPELLIDOAGENDA);
+            schedule.Add(txtDIRECCIONAGENDA);
+            schedule.Add(txtTELEFONO);
 
-            cn.AGENDA(dag, "AÑADIR");
+            function.schedule.SaveDataSchedule(schedule);
+
             BUSCAR(@"SELECT ID_AGENDA AS [ID], NOM_AGENDA AS [NOMBRE], APE_AGENDA AS [APELLIDO], DIR_AGENDA AS [DIRECCION],
             TEL_AGENDA AS [TELEFONO] FROM AGENDA ");
         }
 
         private void btnBORRARAGENDA_Click(object sender, EventArgs e)
         {
-            cn.AGENDA(dag, "BORRAR");
+            function.schedule.DeleteDataSchedule(int.Parse(txtID.Text));
             BUSCAR(@"SELECT ID_AGENDA AS[ID], NOM_AGENDA AS[NOMBRE], APE_AGENDA AS[APELLIDO], DIR_AGENDA AS[DIRECCION],
             TEL_AGENDA AS[TELEFONO] FROM AGENDA ");
         }

@@ -14,7 +14,7 @@ namespace LOGIC {
         public ClassBill Bill = new ClassBill();
         public ClassWareHouse wareHouse = new ClassWareHouse();
         public ClassClient client = new ClassClient();
-
+        public ClassAgenda schedule = new ClassAgenda();
 
         public LOGICA ( ) {
            
