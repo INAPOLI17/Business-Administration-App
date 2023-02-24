@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using DATABASE;
@@ -104,7 +105,7 @@ namespace DATABASE {
 
         public void DATOSFACTURA ( DATOSFACTURA FACTURA, string clave ) {
 
-            conectar.Open();
+            
             switch (clave) {
 
                 case "AÑADIRFACTURA":
@@ -113,29 +114,24 @@ namespace DATABASE {
 
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@ID", FACTURA.ID);
                     cmd.Parameters.AddWithValue("@CLIENTE", FACTURA.NAMECLIENTE);
                     cmd.Parameters.AddWithValue("@IDCLIENTE", FACTURA.IDCLIENTE);
-                    cmd.Parameters.AddWithValue("@FECHA", FACTURA.DATE);
                     cmd.Parameters.AddWithValue("@DIRECCION", FACTURA.DIRECCION);
                     cmd.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
                     cmd.Parameters.AddWithValue("@TOTAL", FACTURA.TOTAL);
                     cmd.Parameters.AddWithValue("@DESCUENTO", FACTURA.DESCUENTO);
                     cmd.Parameters.AddWithValue("@NETO", FACTURA.PAGONETO);
                     cmd.Parameters.AddWithValue("@TIPO", FACTURA.TIPOFACTURA);
+                    cmd.Parameters.AddWithValue("@CANTIDAD", FACTURA.CANTIDAD);
+                    cmd.Parameters.AddWithValue("@PRECIOVENTA", FACTURA.PRECIOVENTA);
+                    cmd.Parameters.AddWithValue("@UNIDAD", FACTURA.MEDIDA);
+                    cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
 
+                    conectar.Open();
                     cmd.ExecuteNonQuery();
-                    break;
+                    FACTURA.ID = (int)cmd.Parameters["RETURN_VALUE"].Value;
 
-                case "ESTADO":
-                    SqlCommand est = new SqlCommand("ADDFACTURA", conectar);
 
-                    est.CommandType = CommandType.StoredProcedure;
-                    est.Parameters.AddWithValue("@ID", FACTURA.ID);
-                    est.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
-                    est.Parameters.AddWithValue("@TIPO", FACTURA.ID);
-
-                    est.ExecuteNonQuery();
                     break;
 
                 case "BORRARFACTURA":
@@ -147,52 +143,25 @@ namespace DATABASE {
                     bf.ExecuteNonQuery();
                     break;
 
-
-                case "PAGO":
-                    SqlCommand hpa = new SqlCommand("ADDHISTORIAL", conectar);
-                    hpa.CommandType = CommandType.StoredProcedure;
-                    hpa.Parameters.AddWithValue("@FACTURA", FACTURA.ID);
-                    hpa.Parameters.AddWithValue("@CLIENTE", FACTURA.NAMECLIENTE);
-                    hpa.Parameters.AddWithValue("@FECHA", FACTURA.DATE);
-
-                    hpa.ExecuteNonQuery();
-                    break;
-
                 }
             conectar.Close();
             }
 
-        public void DATOSDETALLE ( DATOSDETALLE DETALLE, string clave ) {
-            conectar.Open();
+        private DataTable DatosDetalle(List<int> detail, int IdBill ) {
+            DataTable details = new DataTable();
+            details.Columns.Add("ID_PRODETAIL");
+            details.Columns.Add("ID_PRODUCT");
+            details.Columns.Add("CANT_PRODUCT");
 
-            switch (clave) {
-                case "AÑADIRDETALLE":
+            DataRow dr = details.NewRow();
+            foreach (List<int> item in detail) { 
+                dr["ID_PRODETAIL"] = IdBill;
+                dr["ID_PRODUCT"] = item[0];
+                dr["CANT_PRODUCT"] = item[1];
 
-                    SqlCommand cmdDetalle = new SqlCommand("ADDDETALLE", conectar);
-                    cmdDetalle.CommandType = CommandType.StoredProcedure;
-
-                    cmdDetalle.Parameters.AddWithValue("@ID", DETALLE.IDDETALLE);
-                    cmdDetalle.Parameters.AddWithValue("@FACTURA", DETALLE.IDFACTURA);
-                    cmdDetalle.Parameters.AddWithValue("@UNIDAD", DETALLE.MEDIDA);
-                    cmdDetalle.Parameters.AddWithValue("@PRODUCTO", DETALLE.IDPRODUCTO);
-                    cmdDetalle.Parameters.AddWithValue("@CANTIDAD", DETALLE.CANTIDAD);
-                    cmdDetalle.Parameters.AddWithValue("@PRECIOVENTA", DETALLE.PRECIO);
-
-                    cmdDetalle.ExecuteNonQuery();
-                    break;
-
-                case "BORRARDETALLE":
-
-                    SqlCommand bdDetalle = new SqlCommand("DELETEDETALLE", conectar);
-                    bdDetalle.CommandType = CommandType.StoredProcedure;
-
-                    bdDetalle.Parameters.AddWithValue("@ID", DETALLE.IDDETALLE);
-
-                    bdDetalle.ExecuteNonQuery();
-                    break;
                 }
 
-            conectar.Close();
+            return 
             }
 
         public void DATOSUSUARIO ( int ID, string NAMEUSER, string PASSWORD ) {
