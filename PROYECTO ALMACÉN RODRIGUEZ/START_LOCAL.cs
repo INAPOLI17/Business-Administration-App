@@ -82,8 +82,7 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
 
         private void btnGenerar_Click ( object sender, EventArgs e ) {
             List<object> listDataBill = new List<object>();
-            listDataBill.Add(cmbNAMECLIENT);
-            listDataBill.Add(cmbDIRECTIONCLEINT);
+            listDataBill.Add(int.Parse(cmbNAMECLIENT.ValueMember.ToString()));
             listDataBill.Add(StatusFactura);
             listDataBill.Add (TypeFactura);
             listDataBill.Add(txtDESCUENTO);

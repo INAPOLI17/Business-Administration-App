@@ -47,23 +47,8 @@ namespace Lógica.LIBRARY {
             DATOSDETALLE de = new DATOSDETALLE();
 
             fa.NAMECLIENTE = DataForBill[0].ToString();
-            fa.DIRECCION = DataForBill[1].ToString();
             fa.ESTADO = DataForBill[2].ToString();
             fa.TIPOFACTURA = DataForBill[3].ToString();
-
-
-            for (int i = 0; i < dgvDETALLEFACTURA.Rows.Count; i++) {
-
-
-                de.IDFACTURA = fa.ID;
-                de.IDPRODUCTO = int.Parse(dgvDETALLEFACTURA.Rows[i].Cells["ID"].Value.ToString());
-                de.CANTIDAD = int.Parse(dgvDETALLEFACTURA.Rows[i].Cells["CANTIDAD"].Value.ToString());
-                de.MEDIDA = dgvDETALLEFACTURA.Rows[i].Cells["MEDIDA"].Value.ToString();
-                de.PRECIO = int.Parse(dgvDETALLEFACTURA.Rows[i].Cells["PRECIO"].Value.ToString());
-
-                brigdetodata.DATOSDETALLE( de, "AÑADIRDETALLE");
-                brigdetodata.ControlCantidadProductos(de.IDPRODUCTO, de.CANTIDAD);
-                }
 
             reportFactura(dgvDETALLEFACTURA, DataForBill);
             }

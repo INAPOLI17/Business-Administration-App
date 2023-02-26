@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using DATABASE;
+using System.Windows.Forms;
 using DATABASE.LIBRARY.CLADATOS;
 
 
 namespace DATABASE {
     public class CRUD {
+
         SqlConnection conectar = new SqlConnection(@"Data Source=DESKTOP-QUV81SK;Initial Catalog=ALMACEN_RODRIGUEZ;Integrated Security=True");
 
         public DataTable consulta ( string str ) {
@@ -17,152 +19,111 @@ namespace DATABASE {
             return tl;
             }
 
-        public void DATOSCLIENTE ( DATOSCLIENTE CLIENTE, string clave ) {
+        public void DATOSCLIENTE ( DATOSCLIENTE CLIENTE ) {
 
 
-            switch (clave) {
+            SqlCommand cmd = new SqlCommand("ADDCLIENTE", conectar);
+            conectar.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
 
-                case "AÑADIR":
+            cmd.Parameters.AddWithValue("@ID", CLIENTE.ID);
+            cmd.Parameters.AddWithValue("@NOMBRE", CLIENTE.NAMECLIENTE);
+            cmd.Parameters.AddWithValue("@APELLIDO", CLIENTE.APELLIDO);
+            cmd.Parameters.AddWithValue("@TELEFONO", CLIENTE.TELEFONO);
+            cmd.Parameters.AddWithValue("@DIRECCION", CLIENTE.DIRECCION);
+            cmd.Parameters.AddWithValue("@FECHA", CLIENTE.FECHA);
 
-                    SqlCommand cmd = new SqlCommand("ADDCLIENTE", conectar);
-                    conectar.Open();
-                    cmd.CommandType = CommandType.StoredProcedure;
+            cmd.ExecuteNonQuery();
 
-                    cmd.Parameters.AddWithValue("@ID", CLIENTE.ID);
-                    cmd.Parameters.AddWithValue("@NOMBRE", CLIENTE.NAMECLIENTE);
-                    cmd.Parameters.AddWithValue("@APELLIDO", CLIENTE.APELLIDO);
-                    cmd.Parameters.AddWithValue("@TELEFONO", CLIENTE.TELEFONO);
-                    cmd.Parameters.AddWithValue("@DIRECCION", CLIENTE.DIRECCION);
-                    cmd.Parameters.AddWithValue("@FECHA", CLIENTE.FECHA);
-
-                    cmd.ExecuteNonQuery();
-                    break;
-
-                case "BORRAR":
-
-                    SqlCommand bc = new SqlCommand("DELETECLIENTE", conectar);
-                    conectar.Open();
-                    bc.CommandType = CommandType.StoredProcedure;
-
-                    bc.Parameters.AddWithValue("@ID", CLIENTE.ID);
-
-                    bc.ExecuteNonQuery();
-                    break;
-
-                }
             conectar.Close();
             }
 
-        public void DATOSALMACEN ( DATOSPRODUCTOS ALMACEN, string clave ) {
+        public void DATOSALMACEN ( DATOSFACTURA ALMACEN, string clave ) {
+
+            SqlCommand cmd = new SqlCommand("ADDPRODUCTO", conectar);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@ID", ALMACEN.ID);
+            cmd.Parameters.AddWithValue("@NOMBRE", ALMACEN.NAMEPRODUCTO);
+            cmd.Parameters.AddWithValue("@CANTIDAD", ALMACEN.CANTIDAD);
+            cmd.Parameters.AddWithValue("@DISTRIBUIDOR", ALMACEN.DISTRIBUIDOR);
+            cmd.Parameters.AddWithValue("@PRECIOVENTA", ALMACEN.PRECIOVENTA);
+            cmd.Parameters.AddWithValue("@MEDIDA", ALMACEN.MEDIDA);
+            cmd.Parameters.AddWithValue("@PRECIOCOMPRA", ALMACEN.PRECIOCOMPRA);
 
             conectar.Open();
-            switch (clave) {
-                case "AÑADIR":
+            cmd.ExecuteNonQuery();
 
-                    SqlCommand cmd = new SqlCommand("ADDPRODUCTO", conectar);
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@ID", ALMACEN.ID);
-                    cmd.Parameters.AddWithValue("@NOMBRE", ALMACEN.NAMEPRODUCTO);
-                    cmd.Parameters.AddWithValue("@CANTIDAD", ALMACEN.CANTIDAD);
-                    cmd.Parameters.AddWithValue("@DISTRIBUIDOR", ALMACEN.DISTRIBUIDOR);
-                    cmd.Parameters.AddWithValue("@PRECIOVENTA", ALMACEN.PRECIOVENTA);
-                    cmd.Parameters.AddWithValue("@MEDIDA", ALMACEN.MEDIDA);
-                    cmd.Parameters.AddWithValue("@PRECIOCOMPRA", ALMACEN.PRECIOCOMPRA);
-
-
-                    cmd.ExecuteNonQuery();
-                    break;
-
-                case "ACTUALIZAR":
-
-                    SqlCommand cmdCONTROL = new SqlCommand("CONTROLCANTIDAD", conectar);
-
-                    cmdCONTROL.CommandType = CommandType.StoredProcedure;
-
-                    cmdCONTROL.Parameters.AddWithValue("@ID", ALMACEN.ID);
-                    cmdCONTROL.Parameters.AddWithValue("@CANTIDAD", ALMACEN.CANTIDAD);
-
-
-                    cmdCONTROL.ExecuteNonQuery();
-                    break;
-
-                case "BORRAR":
-
-                    SqlCommand bfp = new SqlCommand("DELETEPRODUCTO", conectar);
-
-                    bfp.CommandType = CommandType.StoredProcedure;
-
-                    bfp.Parameters.AddWithValue("@ID", ALMACEN.ID);
-
-                    bfp.ExecuteNonQuery();
-                    break;
-
-                }
             conectar.Close();
             }
 
-        public void DATOSFACTURA ( DATOSFACTURA FACTURA, string clave ) {
-
-            
-            switch (clave) {
-
-                case "AÑADIRFACTURA":
-
-                    SqlCommand cmd = new SqlCommand("ADDFACTURA", conectar);
-
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@CLIENTE", FACTURA.NAMECLIENTE);
-                    cmd.Parameters.AddWithValue("@IDCLIENTE", FACTURA.IDCLIENTE);
-                    cmd.Parameters.AddWithValue("@DIRECCION", FACTURA.DIRECCION);
-                    cmd.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
-                    cmd.Parameters.AddWithValue("@TOTAL", FACTURA.TOTAL);
-                    cmd.Parameters.AddWithValue("@DESCUENTO", FACTURA.DESCUENTO);
-                    cmd.Parameters.AddWithValue("@NETO", FACTURA.PAGONETO);
-                    cmd.Parameters.AddWithValue("@TIPO", FACTURA.TIPOFACTURA);
-                    cmd.Parameters.AddWithValue("@CANTIDAD", FACTURA.CANTIDAD);
-                    cmd.Parameters.AddWithValue("@PRECIOVENTA", FACTURA.PRECIOVENTA);
-                    cmd.Parameters.AddWithValue("@UNIDAD", FACTURA.MEDIDA);
-                    cmd.Parameters.Add("@RETURN_VALUE", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
-
-                    conectar.Open();
-                    cmd.ExecuteNonQuery();
-                    FACTURA.ID = (int)cmd.Parameters["RETURN_VALUE"].Value;
+        public void DATOSFACTURA ( DataGridView detail, DATOSFACTURA FACTURA ) {
 
 
-                    break;
+            SqlCommand cmd = new SqlCommand("ADDFACTURA", conectar);
 
-                case "BORRARFACTURA":
-                    SqlCommand bf = new SqlCommand("DELETEFACTURA", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-                    bf.CommandType = CommandType.StoredProcedure;
-                    bf.Parameters.AddWithValue("@ID", FACTURA.ID);
+            cmd.Parameters.AddWithValue("@IDCLIENTE", FACTURA.IDCLIENTE);
+            cmd.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
+            cmd.Parameters.AddWithValue("@TOTAL", FACTURA.TOTAL);
+            cmd.Parameters.AddWithValue("@DESCUENTO", FACTURA.DESCUENTO);
+            cmd.Parameters.AddWithValue("@TIPO", FACTURA.TIPOFACTURA);
+            cmd.Parameters.AddWithValue("@LISTA", DatosDetalle(detail));
 
-                    bf.ExecuteNonQuery();
-                    break;
 
-                }
+            conectar.Open();
+            cmd.ExecuteNonQuery();
+
+
+
             conectar.Close();
             }
 
-        private DataTable DatosDetalle(List<int> detail, int IdBill ) {
+        private DataTable DatosDetalle ( DataGridView detail ) {
             DataTable details = new DataTable();
             details.Columns.Add("ID_PRODETAIL");
             details.Columns.Add("ID_PRODUCT");
             details.Columns.Add("CANT_PRODUCT");
 
             DataRow dr = details.NewRow();
-            foreach (List<int> item in detail) { 
-                dr["ID_PRODETAIL"] = IdBill;
-                dr["ID_PRODUCT"] = item[0];
-                dr["CANT_PRODUCT"] = item[1];
+            foreach (DataGridViewRow item in detail.Rows) {
+                dr["ID_PRODUCT"] = int.Parse(item.Cells["ID"].Value.ToString());
+                dr["CANT_PRODUCT"] = int.Parse(item.Cells["CANTIDAD"].Value.ToString());
 
                 }
 
-            return 
+            return details;
             }
+
+        public void DeleteRegister ( int id, string ubication ) {
+
+            SqlCommand bf = new SqlCommand("DELETEFACTURA", conectar);
+
+            bf.CommandType = CommandType.StoredProcedure;
+
+            switch (ubication) {
+                case "cli":
+                    bf.Parameters.AddWithValue("@ID", id);
+                    bf.Parameters.AddWithValue("@CLAVE", "CL");
+                    break;
+                case "pro":
+                    bf.Parameters.AddWithValue("@ID", id);
+                    bf.Parameters.AddWithValue("@CLAVE", "CL");
+                    break;
+                case "fac":
+                    bf.Parameters.AddWithValue("@ID", id);
+                    bf.Parameters.AddWithValue("@CLAVE", "CL");
+                    break;
+                }
+
+            conectar.Open();
+            bf.ExecuteNonQuery();
+            conectar.Close();
+
+            }
+
 
         public void DATOSUSUARIO ( int ID, string NAMEUSER, string PASSWORD ) {
             SqlCommand user = new SqlCommand("ADDUSER", conectar);
@@ -239,16 +200,6 @@ namespace DATABASE {
 
             conectar.Close();
             }
-        public void ControlCantidadProductos ( int ID, int Cantidad ) {
 
-            DATOSPRODUCTOS dp = new DATOSPRODUCTOS();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(@"SELECT ID_PRODUCTO AS [ID], CAN_PRODUCTO AS [CANTIDAD] FROM PRODUCTO_CANTIDAD WHERE ID_PRODUCTO = '" + ID + "'", conectar);
-            da.Fill(dt);
-            dp.ID = ID;
-            dp.CANTIDAD = int.Parse(dt.Rows[0]["CANTIDAD"].ToString()) - Cantidad;
-
-            DATOSALMACEN(dp, "ACTUALIZAR");
-            }
         }
     }
