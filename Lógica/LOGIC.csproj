@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LIBRARY\BillAdmincs.cs" />
     <Compile Include="LIBRARY\ClassAgenda.cs" />
     <Compile Include="LIBRARY\ClassBill.cs" />
     <Compile Include="LIBRARY\ClassClient.cs" />

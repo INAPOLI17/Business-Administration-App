@@ -1,5 +1,6 @@
 using LOGIC;
 
+
 namespace INTERFACE {
     public partial class INICIO : Form {
 
@@ -21,8 +22,7 @@ namespace INTERFACE {
             ListRadio.Add(rdbENTREGADO);
             ListRadio.Add(rdbNOENTREGADO);
 
-            function = new LOGICA(ListTextBox, 
-                                    ListRadio);
+            function = new LOGICA();
             }
 
         private LOGICA function;
@@ -61,7 +61,7 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
             if (int.Parse(txtCANTIDADDETALLE.Text) > int.Parse(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString())) {
                 MessageBox.Show("La cantidad indicada sobrepasa el valor de existenia");
                 } else {
-                List<string> detalles = new List<string>;
+                List<string> detalles = new List<string>();
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[0].Value.ToString());
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[1].Value.ToString());
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString());

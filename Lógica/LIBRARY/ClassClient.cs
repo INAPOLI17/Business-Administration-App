@@ -17,6 +17,14 @@ namespace Lógica.LIBRARY {
            
             }
 
+        public void DataView( ref DataGridView dt, String key ) {
+
+            if (key != String.Empty) {
+                dt.DataSource = bridgetobd.consulta("SELECT * FROM PRINCIPAL CLIENT WHERE NOMBRE = '%" + key + "%'");
+                }
+            
+             dt.DataSource = bridgetobd.consulta("SELECT * FROM PRINCIPAL CLIENT");
+            }
         public void SaveDataClient ( List<object> client) {
             cn.ID = int.Parse(client[0].ToString());
             cn.NAMECLIENTE = client[1].ToString();
@@ -24,13 +32,13 @@ namespace Lógica.LIBRARY {
             cn.DIRECCION = client[3].ToString();
             cn.TELEFONO = client[4].ToString();
 
-            bridgetobd.DATOSCLIENTE(cn, "AÑADIR");
+            bridgetobd.DATOSCLIENTE(cn);
 
             }
 
         public void DeleteDataClient (int id ) {
             cn.ID = id;
-            bridgetobd.DATOSCLIENTE(cn, "BORRAR");
+            bridgetobd.DATOSCLIENTE(cn);
             }
 
         }

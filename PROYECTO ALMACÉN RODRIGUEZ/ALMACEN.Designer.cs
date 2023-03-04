@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ALMACEN));
             this.pantallaALMACEN = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.gbAlmacen = new System.Windows.Forms.GroupBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.cmbUNIDADMEDIDA = new System.Windows.Forms.ComboBox();
             this.txtPRECIOVENTA = new System.Windows.Forms.TextBox();
             this.txtDISTRIBUIDOR = new System.Windows.Forms.TextBox();
@@ -53,14 +54,13 @@
             this.btnLIMPIARALMACEN = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBUSCARPRODUCTO = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtWAREHOUSESEARCH = new System.Windows.Forms.TextBox();
             this.btnELIMINARREGISTROALMACEN = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnATRASALMACEN = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.pantallaALMACEN.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.gbAlmacen.SuspendLayout();
@@ -128,6 +128,14 @@
             this.gbAlmacen.TabIndex = 0;
             this.gbAlmacen.TabStop = false;
             this.gbAlmacen.Text = "EDITOR";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(285, 10);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(94, 29);
+            this.txtID.TabIndex = 12;
             // 
             // cmbUNIDADMEDIDA
             // 
@@ -249,28 +257,28 @@
             this.dvgALMACEN.AllowUserToResizeRows = false;
             this.dvgALMACEN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgALMACEN.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgALMACEN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgALMACEN.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dvgALMACEN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgALMACEN.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgALMACEN.EnableHeadersVisualStyles = false;
             this.dvgALMACEN.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dvgALMACEN.Location = new System.Drawing.Point(10, 10);
             this.dvgALMACEN.Name = "dvgALMACEN";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgALMACEN.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgALMACEN.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dvgALMACEN.RowTemplate.Height = 25;
             this.dvgALMACEN.Size = new System.Drawing.Size(691, 387);
             this.dvgALMACEN.TabIndex = 0;
@@ -315,7 +323,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.txtBUSCARPRODUCTO);
-            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Controls.Add(this.txtWAREHOUSESEARCH);
             this.panel4.Controls.Add(this.btnELIMINARREGISTROALMACEN);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(388, 416);
@@ -334,13 +342,13 @@
             this.txtBUSCARPRODUCTO.UseVisualStyleBackColor = true;
             this.txtBUSCARPRODUCTO.Click += new System.EventHandler(this.txtBUSCARPRODUCTO_Click);
             // 
-            // textBox1
+            // txtWAREHOUSESEARCH
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(10, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(216, 35);
-            this.textBox1.TabIndex = 3;
+            this.txtWAREHOUSESEARCH.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtWAREHOUSESEARCH.Location = new System.Drawing.Point(10, 14);
+            this.txtWAREHOUSESEARCH.Name = "txtWAREHOUSESEARCH";
+            this.txtWAREHOUSESEARCH.Size = new System.Drawing.Size(216, 35);
+            this.txtWAREHOUSESEARCH.TabIndex = 3;
             // 
             // btnELIMINARREGISTROALMACEN
             // 
@@ -417,14 +425,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(285, 10);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(94, 29);
-            this.txtID.TabIndex = 12;
-            // 
             // ALMACEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -482,7 +482,7 @@
         private Button btnLIMPIARALMACEN;
         private Button btnELIMINARREGISTROALMACEN;
         private Button txtBUSCARPRODUCTO;
-        private TextBox textBox1;
+        private TextBox txtWAREHOUSESEARCH;
         private TextBox txtID;
     }
 }

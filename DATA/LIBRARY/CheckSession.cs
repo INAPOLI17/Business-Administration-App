@@ -5,7 +5,7 @@ using DATABASE.LIBRARY.CLADATOS;
 
 
 namespace DATABASE {
-    public class CheckSession : ClassSearch {
+    public class CheckSession : CRUD {
 
         public bool checkinicio ( string nombre, string pass ) {
 

@@ -50,12 +50,9 @@
     <Compile Include="LIBRARY\CLADATOS\DATOSCLIENTE.cs" />
     <Compile Include="LIBRARY\CLADATOS\DATOSDETALLE.cs" />
     <Compile Include="LIBRARY\CLADATOS\DATOSFACTURA.cs" />
-    <Compile Include="LIBRARY\CLADATOS\DATOSPRODUICTOS.cs" />
     <Compile Include="LIBRARY\CLADATOS\DATOSUSER.cs" />
     <Compile Include="CONNETION.cs" />
-    <Compile Include="LIBRARY\ClassSearch.cs" />
     <Compile Include="LIBRARY\CRUD.cs" />
-    <Compile Include="LIBRARY\INTERCONNETION.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

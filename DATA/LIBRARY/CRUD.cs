@@ -31,7 +31,6 @@ namespace DATABASE {
             cmd.Parameters.AddWithValue("@APELLIDO", CLIENTE.APELLIDO);
             cmd.Parameters.AddWithValue("@TELEFONO", CLIENTE.TELEFONO);
             cmd.Parameters.AddWithValue("@DIRECCION", CLIENTE.DIRECCION);
-            cmd.Parameters.AddWithValue("@FECHA", CLIENTE.FECHA);
 
             cmd.ExecuteNonQuery();
 
@@ -58,27 +57,32 @@ namespace DATABASE {
             conectar.Close();
             }
 
-        public void DATOSFACTURA ( DataGridView detail, DATOSFACTURA FACTURA ) {
+        public bool DATOSFACTURA ( DataGridView detail, DATOSFACTURA FACTURA ) {
+
+            try {
+                SqlCommand cmd = new SqlCommand("ADDFACTURA", conectar);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@IDCLIENTE", FACTURA.IDCLIENTE);
+                cmd.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
+                cmd.Parameters.AddWithValue("@TOTAL", FACTURA.TOTAL);
+                cmd.Parameters.AddWithValue("@DESCUENTO", FACTURA.DESCUENTO);
+                cmd.Parameters.AddWithValue("@TIPO", FACTURA.TIPOFACTURA);
+                cmd.Parameters.AddWithValue("@LISTA", DatosDetalle(detail));
 
 
-            SqlCommand cmd = new SqlCommand("ADDFACTURA", conectar);
-
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            cmd.Parameters.AddWithValue("@IDCLIENTE", FACTURA.IDCLIENTE);
-            cmd.Parameters.AddWithValue("@ESTADO", FACTURA.ESTADO);
-            cmd.Parameters.AddWithValue("@TOTAL", FACTURA.TOTAL);
-            cmd.Parameters.AddWithValue("@DESCUENTO", FACTURA.DESCUENTO);
-            cmd.Parameters.AddWithValue("@TIPO", FACTURA.TIPOFACTURA);
-            cmd.Parameters.AddWithValue("@LISTA", DatosDetalle(detail));
-
-
-            conectar.Open();
-            cmd.ExecuteNonQuery();
+                conectar.Open();
+                cmd.ExecuteNonQuery();
 
 
 
-            conectar.Close();
+                conectar.Close();
+                return true;
+                }
+            catch (Exception ex) {
+                return false;
+                }
             }
 
         private DataTable DatosDetalle ( DataGridView detail ) {
@@ -123,7 +127,6 @@ namespace DATABASE {
             conectar.Close();
 
             }
-
 
         public void DATOSUSUARIO ( int ID, string NAMEUSER, string PASSWORD ) {
             SqlCommand user = new SqlCommand("ADDUSER", conectar);

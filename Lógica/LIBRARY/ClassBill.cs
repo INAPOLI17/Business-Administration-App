@@ -39,23 +39,26 @@ namespace Lógica.LIBRARY {
             rw.Cells["MEDIDA"].Value = Data[3].ToString();
             rw.Cells["PRECIO"].Value = Data[4].ToString();
 
-            PlusTotal(int.Parse(Data[4].ToString()));
+            fa.TOTAL += (int.Parse(Data[4].ToString()));
             }
 
         public void GenerateBill ( List<object> DataForBill, DataGridView dgvDETALLEFACTURA ) {
 
             DATOSDETALLE de = new DATOSDETALLE();
 
-            fa.NAMECLIENTE = DataForBill[0].ToString();
+            fa.IDCLIENTE = int.Parse(DataForBill[0].ToString());
             fa.ESTADO = DataForBill[2].ToString();
             fa.TIPOFACTURA = DataForBill[3].ToString();
+            fa.DESCUENTO = int.Parse(DataForBill[4].ToString());
 
-            reportFactura(dgvDETALLEFACTURA, DataForBill);
+            if (brigdetodata.DATOSFACTURA(dgvDETALLEFACTURA, fa)) {
+                reportFactura(dgvDETALLEFACTURA, DataForBill);
+                } else {
+                MessageBox.Show("Ocurrio un error al aÑadir la factura");
+                }
             }
 
-        public void PlusTotal ( int precio ) {
-            fa.TOTAL += precio;
-            }
+     
 
         public bool SearchClientName ( ref ComboBox Name, ref ComboBox Direction ) {
             try {

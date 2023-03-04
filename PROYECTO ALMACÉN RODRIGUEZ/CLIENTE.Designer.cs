@@ -34,7 +34,6 @@
             this.pantallaCLIENTE = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.gbEDITARCLIENTE = new System.Windows.Forms.GroupBox();
-            this.TXTID = new System.Windows.Forms.TextBox();
             this.txtTELEFONO = new System.Windows.Forms.TextBox();
             this.txtDIRECCION = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -50,7 +49,7 @@
             this.dgvCLIENTES = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnBUSCARCLIENTES = new System.Windows.Forms.Button();
-            this.txtCLIENTES = new System.Windows.Forms.TextBox();
+            this.txtCLIENTESSEARCH = new System.Windows.Forms.TextBox();
             this.btnBORRARCLIENTE = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnATRASCLIENTE = new System.Windows.Forms.Button();
@@ -98,14 +97,12 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1149, 511);
             this.tableLayoutPanel2.TabIndex = 1;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // gbEDITARCLIENTE
             // 
             this.gbEDITARCLIENTE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbEDITARCLIENTE.Controls.Add(this.TXTID);
             this.gbEDITARCLIENTE.Controls.Add(this.txtTELEFONO);
             this.gbEDITARCLIENTE.Controls.Add(this.txtDIRECCION);
             this.gbEDITARCLIENTE.Controls.Add(this.txtApellido);
@@ -122,16 +119,6 @@
             this.gbEDITARCLIENTE.TabIndex = 2;
             this.gbEDITARCLIENTE.TabStop = false;
             this.gbEDITARCLIENTE.Text = "EDITOR";
-            // 
-            // TXTID
-            // 
-            this.TXTID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TXTID.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TXTID.Location = new System.Drawing.Point(253, 367);
-            this.TXTID.Name = "TXTID";
-            this.TXTID.ReadOnly = true;
-            this.TXTID.Size = new System.Drawing.Size(79, 29);
-            this.TXTID.TabIndex = 9;
             // 
             // txtTELEFONO
             // 
@@ -297,7 +284,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btnBUSCARCLIENTES);
-            this.panel4.Controls.Add(this.txtCLIENTES);
+            this.panel4.Controls.Add(this.txtCLIENTESSEARCH);
             this.panel4.Controls.Add(this.btnBORRARCLIENTE);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(347, 411);
@@ -316,13 +303,13 @@
             this.btnBUSCARCLIENTES.UseVisualStyleBackColor = true;
             this.btnBUSCARCLIENTES.Click += new System.EventHandler(this.btnBUSCARCLIENTES_Click);
             // 
-            // txtCLIENTES
+            // txtCLIENTESSEARCH
             // 
-            this.txtCLIENTES.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCLIENTES.Location = new System.Drawing.Point(10, 27);
-            this.txtCLIENTES.Name = "txtCLIENTES";
-            this.txtCLIENTES.Size = new System.Drawing.Size(237, 35);
-            this.txtCLIENTES.TabIndex = 6;
+            this.txtCLIENTESSEARCH.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtCLIENTESSEARCH.Location = new System.Drawing.Point(10, 27);
+            this.txtCLIENTESSEARCH.Name = "txtCLIENTESSEARCH";
+            this.txtCLIENTESSEARCH.Size = new System.Drawing.Size(237, 35);
+            this.txtCLIENTESSEARCH.TabIndex = 6;
             // 
             // btnBORRARCLIENTE
             // 
@@ -455,7 +442,6 @@
         private Button btnBORRARCLIENTE;
         private Panel panel4;
         private Button btnBUSCARCLIENTES;
-        private TextBox txtCLIENTES;
-        private TextBox TXTID;
+        private TextBox txtCLIENTESSEARCH;
     }
 }

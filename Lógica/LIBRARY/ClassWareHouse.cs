@@ -11,11 +11,18 @@ namespace Lógica.LIBRARY {
     public class ClassWareHouse : Report {
 
         private CONNETION bridgetobd = new CONNETION();
-        private DATOSPRODUCTOS dp = new DATOSPRODUCTOS();
+        private DATOSFACTURA dp = new DATOSFACTURA();
+
+        public void DataView ( ref DataGridView dt, String key ) {
+
+            if (key != String.Empty) {
+                dt.DataSource = bridgetobd.consulta("SELECT * FROM PRODUCTOS  WHERE NOMBRE LIKE '%" + key + "%'");
+                }
+            dt.DataSource = bridgetobd.consulta("SELECT * FROM PRODUCTOS");
+            }
 
         public void SaveDataProducts ( List<object> products ) { 
             
-            if (VerifyDataProducts(products)) {
                 dp.NAMEPRODUCTO = products[0].ToString();
                 dp.CANTIDAD = int.Parse(products[1].ToString());
                 dp.DISTRIBUIDOR = products[2].ToString();
@@ -24,21 +31,6 @@ namespace Lógica.LIBRARY {
                 dp.PRECIOVENTA = int.Parse(products[5].ToString());
 
                 bridgetobd.DATOSALMACEN(dp, "AÑADIR");
-
-                }
-
-            }
-
-        private bool VerifyDataProducts ( List<object> products ) {
-
-            for (int i = 0; i < products.Count; i++) {
-
-                if (products[i] != null) {
-                    return false;
-                    } 
-                
-            }
-            return true;
             }
 
         public void DeleteDataProducts ( int id) {
