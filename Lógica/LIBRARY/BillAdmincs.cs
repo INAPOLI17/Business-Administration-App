@@ -13,10 +13,16 @@ namespace Lógica.LIBRARY {
         private CONNETION brigdetobd = new CONNETION();
         private DATOSFACTURA bill = new DATOSFACTURA();
 
-        public void DataView (ref DataGridView dt , String key ) {
+        public void DataView ( ref DataGridView dt, ref DateTimePicker fecha) {
 
-            if ( key != String.Empty ) {
-                dt.DataSource = brigdetobd.consulta("SELECT * FROM FACTURA_ID WHERE FECHA BETWEEN "+key.ToString("yyyy-MM-dd")+ " AND (SELECT CONVERT (date, GETDATE())) ")
-            }
+            int indice_fila = dt.Rows.Add();
+            DataGridViewRow rw = dt.Rows[indice_fila];
+            dt.DataSource = brigdetobd.consulta("SELECT * FROM BALANCEGENERAL WHERE DETAIL.FEC_FACTURA = " + fecha.Value.ToString("yyyy-MM-dd") + ";");
+            rw.Cells["TOTAL"].Value = int.Parse(rw.Cells["EFECTIVO"].Value.ToString()) + int.Parse(rw.Cells["CREDITO"].Value.ToString());
+                  
+         }
+
+
+
         }
     }
