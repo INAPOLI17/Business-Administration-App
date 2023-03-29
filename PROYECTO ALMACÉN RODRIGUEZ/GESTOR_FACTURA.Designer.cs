@@ -1,7 +1,5 @@
-﻿namespace PROYECTO_ALMACÉN_RODRIGUEZ
-{
-    partial class GESTOR_FACTURA
-    {
+﻿namespace PROYECTO_ALMACÉN_RODRIGUEZ {
+    partial class GESTOR_FACTURA {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,14 +9,12 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose ( bool disposing ) {
+            if (disposing && (components != null)) {
                 components.Dispose();
-            }
+                }
             base.Dispose(disposing);
-        }
+            }
 
         #region Windows Form Designer generated code
 
@@ -26,343 +22,339 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+        private void InitializeComponent ( ) {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GESTOR_FACTURA));
-            this.pantallaGESTORFACTURA = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.gbEDITORVISUALIZADOR = new System.Windows.Forms.GroupBox();
-            this.checkFECHA = new System.Windows.Forms.CheckBox();
-            this.checkCLIENTE = new System.Windows.Forms.CheckBox();
-            this.btnCAMBIARESTADO = new System.Windows.Forms.Button();
-            this.btnPAGARFACTURA = new System.Windows.Forms.Button();
-            this.btnBUCARFACTURA = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.txtCLIENTEGESTOR = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvGESTORFACTURA = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnATRASGESTOR = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pantallaGESTORFACTURA.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.gbEDITORVISUALIZADOR.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGESTORFACTURA)).BeginInit();
-            this.panel5.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pantallaGESTORFACTURA = new Panel();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            panel2 = new Panel();
+            gbEDITORVISUALIZADOR = new GroupBox();
+            checkFECHA = new CheckBox();
+            checkCLIENTE = new CheckBox();
+            btnCAMBIARESTADO = new Button();
+            btnPAGARFACTURA = new Button();
+            btnBUCARFACTURA = new Button();
+            dateTimePicker1 = new DateTimePicker();
+            txtCLIENTEGESTOR = new TextBox();
+            panel3 = new Panel();
+            dgvGESTORFACTURA = new DataGridView();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            button1 = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            btnATRASGESTOR = new Button();
+            panel1 = new Panel();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pantallaGESTORFACTURA.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            panel2.SuspendLayout();
+            gbEDITORVISUALIZADOR.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvGESTORFACTURA).BeginInit();
+            panel5.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pantallaGESTORFACTURA
             // 
-            this.pantallaGESTORFACTURA.Controls.Add(this.tableLayoutPanel2);
-            this.pantallaGESTORFACTURA.Controls.Add(this.tableLayoutPanel1);
-            this.pantallaGESTORFACTURA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pantallaGESTORFACTURA.Location = new System.Drawing.Point(0, 0);
-            this.pantallaGESTORFACTURA.Name = "pantallaGESTORFACTURA";
-            this.pantallaGESTORFACTURA.Size = new System.Drawing.Size(1158, 593);
-            this.pantallaGESTORFACTURA.TabIndex = 0;
+            pantallaGESTORFACTURA.Controls.Add(tableLayoutPanel2);
+            pantallaGESTORFACTURA.Controls.Add(tableLayoutPanel1);
+            pantallaGESTORFACTURA.Dock = DockStyle.Fill;
+            pantallaGESTORFACTURA.Location = new Point(0, 0);
+            pantallaGESTORFACTURA.Name = "pantallaGESTORFACTURA";
+            pantallaGESTORFACTURA.Size = new Size(1158, 593);
+            pantallaGESTORFACTURA.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 1);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 112);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1158, 481);
-            this.tableLayoutPanel2.TabIndex = 1;
+            tableLayoutPanel2.BackColor = Color.Black;
+            tableLayoutPanel2.ColumnCount = 2;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel2.Controls.Add(panel2, 0, 0);
+            tableLayoutPanel2.Controls.Add(panel3, 1, 0);
+            tableLayoutPanel2.Controls.Add(panel4, 0, 1);
+            tableLayoutPanel2.Controls.Add(panel5, 1, 1);
+            tableLayoutPanel2.Dock = DockStyle.Fill;
+            tableLayoutPanel2.Location = new Point(0, 112);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel2.Size = new Size(1158, 481);
+            tableLayoutPanel2.TabIndex = 1;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.gbEDITORVISUALIZADOR);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(457, 378);
-            this.panel2.TabIndex = 0;
+            panel2.Controls.Add(gbEDITORVISUALIZADOR);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(3, 3);
+            panel2.Name = "panel2";
+            panel2.Padding = new Padding(10);
+            panel2.Size = new Size(457, 378);
+            panel2.TabIndex = 0;
             // 
             // gbEDITORVISUALIZADOR
             // 
-            this.gbEDITORVISUALIZADOR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.checkFECHA);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.checkCLIENTE);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.btnCAMBIARESTADO);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.btnPAGARFACTURA);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.btnBUCARFACTURA);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.dateTimePicker1);
-            this.gbEDITORVISUALIZADOR.Controls.Add(this.txtCLIENTEGESTOR);
-            this.gbEDITORVISUALIZADOR.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbEDITORVISUALIZADOR.ForeColor = System.Drawing.Color.White;
-            this.gbEDITORVISUALIZADOR.Location = new System.Drawing.Point(19, 13);
-            this.gbEDITORVISUALIZADOR.Name = "gbEDITORVISUALIZADOR";
-            this.gbEDITORVISUALIZADOR.Size = new System.Drawing.Size(425, 352);
-            this.gbEDITORVISUALIZADOR.TabIndex = 0;
-            this.gbEDITORVISUALIZADOR.TabStop = false;
-            this.gbEDITORVISUALIZADOR.Text = "EDITOR Y VISUALIZADOR";
+            gbEDITORVISUALIZADOR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            gbEDITORVISUALIZADOR.Controls.Add(checkFECHA);
+            gbEDITORVISUALIZADOR.Controls.Add(checkCLIENTE);
+            gbEDITORVISUALIZADOR.Controls.Add(btnCAMBIARESTADO);
+            gbEDITORVISUALIZADOR.Controls.Add(btnPAGARFACTURA);
+            gbEDITORVISUALIZADOR.Controls.Add(btnBUCARFACTURA);
+            gbEDITORVISUALIZADOR.Controls.Add(dateTimePicker1);
+            gbEDITORVISUALIZADOR.Controls.Add(txtCLIENTEGESTOR);
+            gbEDITORVISUALIZADOR.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            gbEDITORVISUALIZADOR.ForeColor = Color.White;
+            gbEDITORVISUALIZADOR.Location = new Point(19, 13);
+            gbEDITORVISUALIZADOR.Name = "gbEDITORVISUALIZADOR";
+            gbEDITORVISUALIZADOR.Size = new Size(425, 352);
+            gbEDITORVISUALIZADOR.TabIndex = 0;
+            gbEDITORVISUALIZADOR.TabStop = false;
+            gbEDITORVISUALIZADOR.Text = "EDITOR Y VISUALIZADOR";
             // 
             // checkFECHA
             // 
-            this.checkFECHA.AutoSize = true;
-            this.checkFECHA.Location = new System.Drawing.Point(17, 114);
-            this.checkFECHA.Name = "checkFECHA";
-            this.checkFECHA.Size = new System.Drawing.Size(94, 26);
-            this.checkFECHA.TabIndex = 8;
-            this.checkFECHA.Text = "FECHA";
-            this.checkFECHA.UseVisualStyleBackColor = true;
-            this.checkFECHA.CheckedChanged += new System.EventHandler(this.checkFECHA_CheckedChanged);
+            checkFECHA.AutoSize = true;
+            checkFECHA.Location = new Point(17, 114);
+            checkFECHA.Name = "checkFECHA";
+            checkFECHA.Size = new Size(94, 26);
+            checkFECHA.TabIndex = 8;
+            checkFECHA.Text = "FECHA";
+            checkFECHA.UseVisualStyleBackColor = true;
+            checkFECHA.CheckedChanged += checkFECHA_CheckedChanged;
             // 
             // checkCLIENTE
             // 
-            this.checkCLIENTE.AutoSize = true;
-            this.checkCLIENTE.Location = new System.Drawing.Point(17, 28);
-            this.checkCLIENTE.Name = "checkCLIENTE";
-            this.checkCLIENTE.Size = new System.Drawing.Size(112, 26);
-            this.checkCLIENTE.TabIndex = 7;
-            this.checkCLIENTE.Text = "CLIENTE";
-            this.checkCLIENTE.UseVisualStyleBackColor = true;
-            this.checkCLIENTE.CheckedChanged += new System.EventHandler(this.checkCLIENTE_CheckedChanged);
+            checkCLIENTE.AutoSize = true;
+            checkCLIENTE.Location = new Point(17, 28);
+            checkCLIENTE.Name = "checkCLIENTE";
+            checkCLIENTE.Size = new Size(112, 26);
+            checkCLIENTE.TabIndex = 7;
+            checkCLIENTE.Text = "CLIENTE";
+            checkCLIENTE.UseVisualStyleBackColor = true;
+            checkCLIENTE.CheckedChanged += checkCLIENTE_CheckedChanged;
             // 
             // btnCAMBIARESTADO
             // 
-            this.btnCAMBIARESTADO.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnCAMBIARESTADO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCAMBIARESTADO.ForeColor = System.Drawing.Color.Black;
-            this.btnCAMBIARESTADO.Location = new System.Drawing.Point(17, 300);
-            this.btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
-            this.btnCAMBIARESTADO.Size = new System.Drawing.Size(232, 30);
-            this.btnCAMBIARESTADO.TabIndex = 6;
-            this.btnCAMBIARESTADO.Text = "CAMBIAR ESTADO";
-            this.btnCAMBIARESTADO.UseVisualStyleBackColor = false;
-            this.btnCAMBIARESTADO.Click += new System.EventHandler(this.btnCAMBIARESTADO_Click);
+            btnCAMBIARESTADO.Anchor = AnchorStyles.Left;
+            btnCAMBIARESTADO.BackColor = Color.FromArgb(128, 255, 255);
+            btnCAMBIARESTADO.ForeColor = Color.Black;
+            btnCAMBIARESTADO.Location = new Point(17, 300);
+            btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
+            btnCAMBIARESTADO.Size = new Size(232, 30);
+            btnCAMBIARESTADO.TabIndex = 6;
+            btnCAMBIARESTADO.Text = "CAMBIAR ESTADO";
+            btnCAMBIARESTADO.UseVisualStyleBackColor = false;
+            btnCAMBIARESTADO.Click += btnCAMBIARESTADO_Click;
             // 
             // btnPAGARFACTURA
             // 
-            this.btnPAGARFACTURA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnPAGARFACTURA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnPAGARFACTURA.ForeColor = System.Drawing.Color.Black;
-            this.btnPAGARFACTURA.Location = new System.Drawing.Point(17, 246);
-            this.btnPAGARFACTURA.Name = "btnPAGARFACTURA";
-            this.btnPAGARFACTURA.Size = new System.Drawing.Size(232, 30);
-            this.btnPAGARFACTURA.TabIndex = 5;
-            this.btnPAGARFACTURA.Text = "PAGAR FACTURA";
-            this.btnPAGARFACTURA.UseVisualStyleBackColor = false;
-            this.btnPAGARFACTURA.Click += new System.EventHandler(this.btnPAGARFACTURA_Click);
+            btnPAGARFACTURA.Anchor = AnchorStyles.Left;
+            btnPAGARFACTURA.BackColor = Color.FromArgb(128, 255, 255);
+            btnPAGARFACTURA.ForeColor = Color.Black;
+            btnPAGARFACTURA.Location = new Point(17, 246);
+            btnPAGARFACTURA.Name = "btnPAGARFACTURA";
+            btnPAGARFACTURA.Size = new Size(232, 30);
+            btnPAGARFACTURA.TabIndex = 5;
+            btnPAGARFACTURA.Text = "PAGAR FACTURA";
+            btnPAGARFACTURA.UseVisualStyleBackColor = false;
+            btnPAGARFACTURA.Click += btnPAGARFACTURA_Click;
             // 
             // btnBUCARFACTURA
             // 
-            this.btnBUCARFACTURA.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBUCARFACTURA.ForeColor = System.Drawing.Color.Black;
-            this.btnBUCARFACTURA.Location = new System.Drawing.Point(287, 147);
-            this.btnBUCARFACTURA.Name = "btnBUCARFACTURA";
-            this.btnBUCARFACTURA.Size = new System.Drawing.Size(106, 30);
-            this.btnBUCARFACTURA.TabIndex = 4;
-            this.btnBUCARFACTURA.Text = "BUSCAR";
-            this.btnBUCARFACTURA.UseVisualStyleBackColor = true;
-            this.btnBUCARFACTURA.Click += new System.EventHandler(this.btnBUCARFACTURA_Click);
+            btnBUCARFACTURA.Anchor = AnchorStyles.Left;
+            btnBUCARFACTURA.ForeColor = Color.Black;
+            btnBUCARFACTURA.Location = new Point(287, 147);
+            btnBUCARFACTURA.Name = "btnBUCARFACTURA";
+            btnBUCARFACTURA.Size = new Size(106, 30);
+            btnBUCARFACTURA.TabIndex = 4;
+            btnBUCARFACTURA.Text = "BUSCAR";
+            btnBUCARFACTURA.UseVisualStyleBackColor = true;
+            btnBUCARFACTURA.Click += btnBUCARFACTURA_Click;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 146);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(174, 29);
-            this.dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.CustomFormat = "";
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(17, 146);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(174, 29);
+            dateTimePicker1.TabIndex = 3;            
             // 
             // txtCLIENTEGESTOR
             // 
-            this.txtCLIENTEGESTOR.Location = new System.Drawing.Point(17, 59);
-            this.txtCLIENTEGESTOR.Name = "txtCLIENTEGESTOR";
-            this.txtCLIENTEGESTOR.Size = new System.Drawing.Size(270, 29);
-            this.txtCLIENTEGESTOR.TabIndex = 2;
+            txtCLIENTEGESTOR.Location = new Point(17, 59);
+            txtCLIENTEGESTOR.Name = "txtCLIENTEGESTOR";
+            txtCLIENTEGESTOR.Size = new Size(270, 29);
+            txtCLIENTEGESTOR.TabIndex = 2;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dgvGESTORFACTURA);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(466, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(10);
-            this.panel3.Size = new System.Drawing.Size(689, 378);
-            this.panel3.TabIndex = 0;
+            panel3.Controls.Add(dgvGESTORFACTURA);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(466, 3);
+            panel3.Name = "panel3";
+            panel3.Padding = new Padding(10);
+            panel3.Size = new Size(689, 378);
+            panel3.TabIndex = 0;
             // 
             // dgvGESTORFACTURA
             // 
-            this.dgvGESTORFACTURA.AllowUserToAddRows = false;
-            this.dgvGESTORFACTURA.AllowUserToDeleteRows = false;
-            this.dgvGESTORFACTURA.AllowUserToOrderColumns = true;
-            this.dgvGESTORFACTURA.AllowUserToResizeColumns = false;
-            this.dgvGESTORFACTURA.AllowUserToResizeRows = false;
-            this.dgvGESTORFACTURA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvGESTORFACTURA.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGESTORFACTURA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvGESTORFACTURA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGESTORFACTURA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvGESTORFACTURA.EnableHeadersVisualStyles = false;
-            this.dgvGESTORFACTURA.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvGESTORFACTURA.Location = new System.Drawing.Point(10, 10);
-            this.dgvGESTORFACTURA.Name = "dgvGESTORFACTURA";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGESTORFACTURA.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvGESTORFACTURA.RowTemplate.Height = 25;
-            this.dgvGESTORFACTURA.Size = new System.Drawing.Size(669, 358);
-            this.dgvGESTORFACTURA.TabIndex = 0;
-            this.dgvGESTORFACTURA.DoubleClick += new System.EventHandler(this.dgvGESTORFACTURA_DoubleClick);
+            dgvGESTORFACTURA.AllowUserToAddRows = false;
+            dgvGESTORFACTURA.AllowUserToDeleteRows = false;
+            dgvGESTORFACTURA.AllowUserToOrderColumns = true;
+            dgvGESTORFACTURA.AllowUserToResizeColumns = false;
+            dgvGESTORFACTURA.AllowUserToResizeRows = false;
+            dgvGESTORFACTURA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvGESTORFACTURA.BackgroundColor = SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvGESTORFACTURA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvGESTORFACTURA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGESTORFACTURA.Dock = DockStyle.Fill;
+            dgvGESTORFACTURA.EnableHeadersVisualStyles = false;
+            dgvGESTORFACTURA.GridColor = SystemColors.ActiveCaptionText;
+            dgvGESTORFACTURA.Location = new Point(10, 10);
+            dgvGESTORFACTURA.Name = "dgvGESTORFACTURA";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvGESTORFACTURA.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvGESTORFACTURA.RowTemplate.Height = 25;
+            dgvGESTORFACTURA.Size = new Size(669, 358);
+            dgvGESTORFACTURA.TabIndex = 0;
+            dgvGESTORFACTURA.DoubleClick += dgvGESTORFACTURA_DoubleClick;
             // 
             // panel4
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 387);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(457, 91);
-            this.panel4.TabIndex = 0;
+            panel4.Dock = DockStyle.Fill;
+            panel4.Location = new Point(3, 387);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(457, 91);
+            panel4.TabIndex = 0;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(466, 387);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(689, 91);
-            this.panel5.TabIndex = 0;
+            panel5.Controls.Add(button1);
+            panel5.Dock = DockStyle.Fill;
+            panel5.Location = new Point(466, 387);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(689, 91);
+            panel5.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(372, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(307, 38);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ELIMINAR REGISTRO";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Anchor = AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(192, 0, 0);
+            button1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(372, 26);
+            button1.Name = "button1";
+            button1.Size = new Size(307, 38);
+            button1.TabIndex = 0;
+            button1.Text = "ELIMINAR REGISTRO";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel1.Controls.Add(this.btnATRASGESTOR, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1158, 112);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 85F));
+            tableLayoutPanel1.Controls.Add(btnATRASGESTOR, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel1, 1, 0);
+            tableLayoutPanel1.Dock = DockStyle.Top;
+            tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Size = new Size(1158, 112);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // btnATRASGESTOR
             // 
-            this.btnATRASGESTOR.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnATRASGESTOR.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnATRASGESTOR.BackgroundImage")));
-            this.btnATRASGESTOR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnATRASGESTOR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnATRASGESTOR.Location = new System.Drawing.Point(3, 3);
-            this.btnATRASGESTOR.Name = "btnATRASGESTOR";
-            this.btnATRASGESTOR.Size = new System.Drawing.Size(167, 106);
-            this.btnATRASGESTOR.TabIndex = 0;
-            this.btnATRASGESTOR.UseVisualStyleBackColor = false;
-            this.btnATRASGESTOR.Click += new System.EventHandler(this.btnATRASGESTOR_Click);
+            btnATRASGESTOR.BackColor = SystemColors.ActiveCaption;
+            btnATRASGESTOR.BackgroundImage = (Image)resources.GetObject("btnATRASGESTOR.BackgroundImage");
+            btnATRASGESTOR.BackgroundImageLayout = ImageLayout.Stretch;
+            btnATRASGESTOR.Dock = DockStyle.Fill;
+            btnATRASGESTOR.Location = new Point(3, 3);
+            btnATRASGESTOR.Name = "btnATRASGESTOR";
+            btnATRASGESTOR.Size = new Size(167, 106);
+            btnATRASGESTOR.TabIndex = 0;
+            btnATRASGESTOR.UseVisualStyleBackColor = false;
+            btnATRASGESTOR.Click += btnATRASGESTOR_Click;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(176, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10);
-            this.panel1.Size = new System.Drawing.Size(979, 106);
-            this.panel1.TabIndex = 1;
+            panel1.BackColor = Color.FromArgb(224, 224, 224);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(176, 3);
+            panel1.Name = "panel1";
+            panel1.Padding = new Padding(10);
+            panel1.Size = new Size(979, 106);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(169, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 44);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "GESTOR DE FACTURA";
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 27.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(169, 32);
+            label1.Name = "label1";
+            label1.Size = new Size(427, 44);
+            label1.TabIndex = 1;
+            label1.Text = "GESTOR DE FACTURA";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Anchor = AnchorStyles.Left;
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(13, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(150, 100);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // GESTOR_FACTURA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 593);
-            this.Controls.Add(this.pantallaGESTORFACTURA);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GESTOR_FACTURA";
-            this.Text = "GESTOR_FACTURA";
-            this.Load += new System.EventHandler(this.GESTOR_FACTURA_Load);
-            this.pantallaGESTORFACTURA.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.gbEDITORVISUALIZADOR.ResumeLayout(false);
-            this.gbEDITORVISUALIZADOR.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGESTORFACTURA)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
-        }
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1158, 593);
+            Controls.Add(pantallaGESTORFACTURA);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "GESTOR_FACTURA";
+            Text = "GESTOR_FACTURA";
+            Load += GESTOR_FACTURA_Load;
+            pantallaGESTORFACTURA.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            gbEDITORVISUALIZADOR.ResumeLayout(false);
+            gbEDITORVISUALIZADOR.PerformLayout();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvGESTORFACTURA).EndInit();
+            panel5.ResumeLayout(false);
+            tableLayoutPanel1.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            }
 
         #endregion
 
@@ -387,5 +379,5 @@
         private Button btnBUCARFACTURA;
         private DataGridView dgvGESTORFACTURA;
         private Button button1;
+        }
     }
-}
