@@ -30,16 +30,17 @@
             tableLayoutPanel2 = new TableLayoutPanel();
             panel2 = new Panel();
             gbEDITORVISUALIZADOR = new GroupBox();
-            checkFECHA = new CheckBox();
-            checkCLIENTE = new CheckBox();
-            btnCAMBIARESTADO = new Button();
-            btnPAGARFACTURA = new Button();
+            label3 = new Label();
+            label2 = new Label();
+            dateTimePicker2 = new DateTimePicker();
             btnBUCARFACTURA = new Button();
             dateTimePicker1 = new DateTimePicker();
             txtCLIENTEGESTOR = new TextBox();
             panel3 = new Panel();
             dgvGESTORFACTURA = new DataGridView();
             panel4 = new Panel();
+            btnPAGARFACTURA = new Button();
+            btnCAMBIARESTADO = new Button();
             panel5 = new Panel();
             button1 = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -47,12 +48,14 @@
             panel1 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            btnSeeAllBill = new Button();
             pantallaGESTORFACTURA.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
             gbEDITORVISUALIZADOR.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvGESTORFACTURA).BeginInit();
+            panel4.SuspendLayout();
             panel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
@@ -101,10 +104,10 @@
             // gbEDITORVISUALIZADOR
             // 
             gbEDITORVISUALIZADOR.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            gbEDITORVISUALIZADOR.Controls.Add(checkFECHA);
-            gbEDITORVISUALIZADOR.Controls.Add(checkCLIENTE);
-            gbEDITORVISUALIZADOR.Controls.Add(btnCAMBIARESTADO);
-            gbEDITORVISUALIZADOR.Controls.Add(btnPAGARFACTURA);
+            gbEDITORVISUALIZADOR.Controls.Add(btnSeeAllBill);
+            gbEDITORVISUALIZADOR.Controls.Add(label3);
+            gbEDITORVISUALIZADOR.Controls.Add(label2);
+            gbEDITORVISUALIZADOR.Controls.Add(dateTimePicker2);
             gbEDITORVISUALIZADOR.Controls.Add(btnBUCARFACTURA);
             gbEDITORVISUALIZADOR.Controls.Add(dateTimePicker1);
             gbEDITORVISUALIZADOR.Controls.Add(txtCLIENTEGESTOR);
@@ -117,74 +120,52 @@
             gbEDITORVISUALIZADOR.TabStop = false;
             gbEDITORVISUALIZADOR.Text = "EDITOR Y VISUALIZADOR";
             // 
-            // checkFECHA
+            // label3
             // 
-            checkFECHA.AutoSize = true;
-            checkFECHA.Location = new Point(17, 114);
-            checkFECHA.Name = "checkFECHA";
-            checkFECHA.Size = new Size(94, 26);
-            checkFECHA.TabIndex = 8;
-            checkFECHA.Text = "FECHA";
-            checkFECHA.UseVisualStyleBackColor = true;
-            checkFECHA.CheckedChanged += checkFECHA_CheckedChanged;
+            label3.AutoSize = true;
+            label3.Location = new Point(17, 109);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 22);
+            label3.TabIndex = 11;
+            label3.Text = "FECHA";
             // 
-            // checkCLIENTE
+            // label2
             // 
-            checkCLIENTE.AutoSize = true;
-            checkCLIENTE.Location = new Point(17, 28);
-            checkCLIENTE.Name = "checkCLIENTE";
-            checkCLIENTE.Size = new Size(112, 26);
-            checkCLIENTE.TabIndex = 7;
-            checkCLIENTE.Text = "CLIENTE";
-            checkCLIENTE.UseVisualStyleBackColor = true;
-            checkCLIENTE.CheckedChanged += checkCLIENTE_CheckedChanged;
+            label2.AutoSize = true;
+            label2.Location = new Point(17, 25);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 22);
+            label2.TabIndex = 10;
+            label2.Text = "CLIENTE";
             // 
-            // btnCAMBIARESTADO
+            // dateTimePicker2
             // 
-            btnCAMBIARESTADO.Anchor = AnchorStyles.Left;
-            btnCAMBIARESTADO.BackColor = Color.FromArgb(128, 255, 255);
-            btnCAMBIARESTADO.ForeColor = Color.Black;
-            btnCAMBIARESTADO.Location = new Point(17, 300);
-            btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
-            btnCAMBIARESTADO.Size = new Size(232, 30);
-            btnCAMBIARESTADO.TabIndex = 6;
-            btnCAMBIARESTADO.Text = "CAMBIAR ESTADO";
-            btnCAMBIARESTADO.UseVisualStyleBackColor = false;
-            btnCAMBIARESTADO.Click += btnCAMBIARESTADO_Click;
-            // 
-            // btnPAGARFACTURA
-            // 
-            btnPAGARFACTURA.Anchor = AnchorStyles.Left;
-            btnPAGARFACTURA.BackColor = Color.FromArgb(128, 255, 255);
-            btnPAGARFACTURA.ForeColor = Color.Black;
-            btnPAGARFACTURA.Location = new Point(17, 246);
-            btnPAGARFACTURA.Name = "btnPAGARFACTURA";
-            btnPAGARFACTURA.Size = new Size(232, 30);
-            btnPAGARFACTURA.TabIndex = 5;
-            btnPAGARFACTURA.Text = "PAGAR FACTURA";
-            btnPAGARFACTURA.UseVisualStyleBackColor = false;
-            btnPAGARFACTURA.Click += btnPAGARFACTURA_Click;
+            dateTimePicker2.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(17, 198);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(174, 29);
+            dateTimePicker2.TabIndex = 9;
             // 
             // btnBUCARFACTURA
             // 
             btnBUCARFACTURA.Anchor = AnchorStyles.Left;
             btnBUCARFACTURA.ForeColor = Color.Black;
-            btnBUCARFACTURA.Location = new Point(287, 147);
+            btnBUCARFACTURA.Location = new Point(17, 262);
             btnBUCARFACTURA.Name = "btnBUCARFACTURA";
-            btnBUCARFACTURA.Size = new Size(106, 30);
+            btnBUCARFACTURA.Size = new Size(174, 30);
             btnBUCARFACTURA.TabIndex = 4;
             btnBUCARFACTURA.Text = "BUSCAR";
             btnBUCARFACTURA.UseVisualStyleBackColor = true;
-            btnBUCARFACTURA.Click += btnBUCARFACTURA_Click;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.CustomFormat = "";
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.Location = new Point(17, 146);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(174, 29);
-            dateTimePicker1.TabIndex = 3;            
+            dateTimePicker1.TabIndex = 3;
             // 
             // txtCLIENTEGESTOR
             // 
@@ -192,6 +173,7 @@
             txtCLIENTEGESTOR.Name = "txtCLIENTEGESTOR";
             txtCLIENTEGESTOR.Size = new Size(270, 29);
             txtCLIENTEGESTOR.TabIndex = 2;
+            txtCLIENTEGESTOR.TextChanged += ActiveText;
             // 
             // panel3
             // 
@@ -241,11 +223,41 @@
             // 
             // panel4
             // 
+            panel4.Controls.Add(btnPAGARFACTURA);
+            panel4.Controls.Add(btnCAMBIARESTADO);
             panel4.Dock = DockStyle.Fill;
             panel4.Location = new Point(3, 387);
             panel4.Name = "panel4";
             panel4.Size = new Size(457, 91);
             panel4.TabIndex = 0;
+            // 
+            // btnPAGARFACTURA
+            // 
+            btnPAGARFACTURA.Anchor = AnchorStyles.Left;
+            btnPAGARFACTURA.BackColor = Color.FromArgb(128, 255, 255);
+            btnPAGARFACTURA.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPAGARFACTURA.ForeColor = Color.Black;
+            btnPAGARFACTURA.Location = new Point(19, 3);
+            btnPAGARFACTURA.Name = "btnPAGARFACTURA";
+            btnPAGARFACTURA.Size = new Size(232, 30);
+            btnPAGARFACTURA.TabIndex = 5;
+            btnPAGARFACTURA.Text = "PAGAR FACTURA";
+            btnPAGARFACTURA.UseVisualStyleBackColor = false;
+            btnPAGARFACTURA.Click += btnPAGARFACTURA_Click;
+            // 
+            // btnCAMBIARESTADO
+            // 
+            btnCAMBIARESTADO.Anchor = AnchorStyles.Left;
+            btnCAMBIARESTADO.BackColor = Color.FromArgb(128, 255, 255);
+            btnCAMBIARESTADO.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCAMBIARESTADO.ForeColor = Color.Black;
+            btnCAMBIARESTADO.Location = new Point(19, 52);
+            btnCAMBIARESTADO.Name = "btnCAMBIARESTADO";
+            btnCAMBIARESTADO.Size = new Size(232, 30);
+            btnCAMBIARESTADO.TabIndex = 6;
+            btnCAMBIARESTADO.Text = "CAMBIAR ESTADO";
+            btnCAMBIARESTADO.UseVisualStyleBackColor = false;
+            btnCAMBIARESTADO.Click += btnCAMBIARESTADO_Click;
             // 
             // panel5
             // 
@@ -331,6 +343,18 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // btnSeeAllBill
+            // 
+            btnSeeAllBill.Anchor = AnchorStyles.Left;
+            btnSeeAllBill.ForeColor = Color.Black;
+            btnSeeAllBill.Location = new Point(368, 16);
+            btnSeeAllBill.Name = "btnSeeAllBill";
+            btnSeeAllBill.Size = new Size(51, 41);
+            btnSeeAllBill.TabIndex = 12;
+            btnSeeAllBill.Text = "R";
+            btnSeeAllBill.UseVisualStyleBackColor = true;
+            btnSeeAllBill.Click += btnSeeAllBill_Click;
+            // 
             // GESTOR_FACTURA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -348,6 +372,7 @@
             gbEDITORVISUALIZADOR.PerformLayout();
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvGESTORFACTURA).EndInit();
+            panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
@@ -372,12 +397,14 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
-        private CheckBox checkFECHA;
-        private CheckBox checkCLIENTE;
         private Button btnCAMBIARESTADO;
         private Button btnPAGARFACTURA;
         private Button btnBUCARFACTURA;
         private DataGridView dgvGESTORFACTURA;
         private Button button1;
+        private DateTimePicker dateTimePicker2;
+        private Label label3;
+        private Label label2;
+        private Button btnSeeAllBill;
         }
     }

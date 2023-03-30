@@ -85,6 +85,7 @@ namespace DATABASE {
                 }
             }
 
+       
         private DataTable DatosDetalle ( DataGridView detail ) {
             DataTable details = new DataTable();
             details.Columns.Add("ID_PRODETAIL");
@@ -99,6 +100,23 @@ namespace DATABASE {
                 }
 
             return details;
+            }
+
+        public void DATOSFACTURA ( DATOSFACTURA status ) {
+            try {
+                SqlCommand cmd = new SqlCommand("ADDFACTURA", conectar);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ESTADO", status.ESTADO);
+
+                conectar.Open();
+                cmd.ExecuteNonQuery();
+
+                conectar.Close();
+                }catch (Exception ex) {
+                return;
+                }
             }
 
         public void DeleteRegister ( int id, string ubication ) {
