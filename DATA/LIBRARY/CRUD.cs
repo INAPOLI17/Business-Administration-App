@@ -119,26 +119,13 @@ namespace DATABASE {
                 }
             }
 
-        public void DeleteRegister ( int id, string ubication ) {
+        public void DeleteRegisterBill ( int id ) {
 
             SqlCommand bf = new SqlCommand("DELETEFACTURA", conectar);
 
             bf.CommandType = CommandType.StoredProcedure;
 
-            switch (ubication) {
-                case "cli":
-                    bf.Parameters.AddWithValue("@ID", id);
-                    bf.Parameters.AddWithValue("@CLAVE", "CL");
-                    break;
-                case "pro":
-                    bf.Parameters.AddWithValue("@ID", id);
-                    bf.Parameters.AddWithValue("@CLAVE", "CL");
-                    break;
-                case "fac":
-                    bf.Parameters.AddWithValue("@ID", id);
-                    bf.Parameters.AddWithValue("@CLAVE", "CL");
-                    break;
-                }
+            bf.Parameters.AddWithValue("@ID", id);
 
             conectar.Open();
             bf.ExecuteNonQuery();
@@ -176,11 +163,7 @@ namespace DATABASE {
             conectar.Close();
             }
 
-        public void AGENDA ( DATOAGENDA AG, string clave ) {
-
-            conectar.Open();
-            switch (clave) {
-                case "AÑADIR":
+        public void AGENDA ( DATOAGENDA AG) {
 
                     SqlCommand cmd = new SqlCommand("ADDAGENDA", conectar);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -191,20 +174,20 @@ namespace DATABASE {
                     cmd.Parameters.AddWithValue("@DIRECCION", AG.DIRECCIONAGENDA);
                     cmd.Parameters.AddWithValue("@TELEFONO", AG.TELEFONO);
 
+            conectar.Open();
+            cmd.ExecuteNonQuery();
+            conectar.Close();
+            }
 
-                    cmd.ExecuteNonQuery();
-                    break;
+        public void DeleteRegisterSchedule ( int id ) {
+            SqlCommand bf = new SqlCommand("DELETEAGENDA", conectar);
 
-                case "BORRAR":
+            bf.CommandType = CommandType.StoredProcedure;
 
-                    SqlCommand bfp = new SqlCommand("DELETEAGENDA", conectar);
-                    bfp.CommandType = CommandType.StoredProcedure;
-                    bfp.Parameters.AddWithValue("@ID", AG.IDAGENDA);
+            bf.Parameters.AddWithValue("@ID", id);
 
-                    bfp.ExecuteNonQuery();
-                    break;
-
-                }
+            conectar.Open();
+            bf.ExecuteNonQuery();
             conectar.Close();
             }
 

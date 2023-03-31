@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LOGIC;
+using Lógica.LIBRARY;
 
 namespace PROYECTO_ALMACÉN_RODRIGUEZ
 {
@@ -17,12 +17,11 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
         {
             InitializeComponent();
             schedule = new List<object>();
-            function = new LOGICA();
+            scheduleClass = new Schedule();
             }
 
         private List<object> schedule;
-        private LOGICA function;
-
+        private Schedule scheduleClass;
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -31,33 +30,29 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
             txtAPELLIDOAGENDA.Text = dataGridView1.SelectedCells[2].Value.ToString();
             txtDIRECCIONAGENDA.Text = dataGridView1.SelectedCells[3].Value.ToString();
             txtTELEFONO.Text = dataGridView1.SelectedCells[4].Value.ToString();
+
         }
 
         private void AGENDA_Load(object sender, EventArgs e)
-        {
-             BUSCAR(@"SELECT ID_AGENDA AS[ID], NOM_AGENDA AS[NOMBRE], APE_AGENDA AS[APELLIDO], DIR_AGENDA AS[DIRECCION],
-            TEL_AGENDA AS[TELEFONO] FROM AGENDA ");
-        }
-
-        private void btnGUARDARAGENDA_Click(object sender, EventArgs e)
-        {
+        {         
             schedule.Add(txtID);
             schedule.Add(txtNOMBREAGENDA);
             schedule.Add(txtAPELLIDOAGENDA);
             schedule.Add(txtDIRECCIONAGENDA);
             schedule.Add(txtTELEFONO);
 
-            function.schedule.SaveDataSchedule(schedule);
+        }
 
-            BUSCAR(@"SELECT ID_AGENDA AS [ID], NOM_AGENDA AS [NOMBRE], APE_AGENDA AS [APELLIDO], DIR_AGENDA AS [DIRECCION],
-            TEL_AGENDA AS [TELEFONO] FROM AGENDA ");
+        private void btnGUARDARAGENDA_Click(object sender, EventArgs e)
+        {
+            scheduleClass.SaveDataSchedule(schedule);
+            BUSCAR();
         }
 
         private void btnBORRARAGENDA_Click(object sender, EventArgs e)
         {
-            function.schedule.DeleteDataSchedule(int.Parse(txtID.Text));
-            BUSCAR(@"SELECT ID_AGENDA AS[ID], NOM_AGENDA AS[NOMBRE], APE_AGENDA AS[APELLIDO], DIR_AGENDA AS[DIRECCION],
-            TEL_AGENDA AS[TELEFONO] FROM AGENDA ");
+            scheduleClass.DeleteDataSchedule(int.Parse(txtID.Text));
+            BUSCAR();
         }
 
         private void btnLIMPIARAGENDA_Click(object sender, EventArgs e)
@@ -70,9 +65,9 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
 
         }
 
-        public void BUSCAR(string str)
+        public void BUSCAR()
         {
-            dataGridView1.DataSource=cn.consulta(str);
+            scheduleClass.Filldata(ref dataGridView1);
         }
     }
 }

@@ -1,5 +1,5 @@
 using LOGIC;
-
+using Lógica.LIBRARY;
 
 namespace INTERFACE {
     public partial class INICIO : Form {
@@ -22,37 +22,27 @@ namespace INTERFACE {
             ListRadio.Add(rdbENTREGADO);
             ListRadio.Add(rdbNOENTREGADO);
 
-            function = new LOGICA();
+             ini = new ClassBill();
             }
 
-        private LOGICA function;
+        private ClassBill ini;
 
         private void INICIO_Load ( object sender, EventArgs e ) {
-            function.Bill.ShowData();
-            
+            BUSCAR();                          
             }
 
         private void btnBuscarproducto_Click ( object sender, EventArgs e ) {
-            BUSCAR(@"SELECT PRID.ID_PRODUCTO AS [ID],PRID.NOM_PRODUCTO AS [PRODUCTO],PRID.MED_PRODUCTO AS [MEDIDA], PRCA.CAN_PRODUCTO AS [CANTIDAD], 
-PRPR.PVEN_PRODUCTO AS [PRECIO] FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCTO= PRCA.ID_PRODUCTO  INNER JOIN 
-PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRODUCTO > '0' AND WHERE PRID.NOM_PRODUCTO LIKE 
-'%" + txtProductos + "%'");
+            BUSCAR(txtProductos.Text);
+            }
+
+        private void BUSCAR () {
+
+            ini.FillData(ref dgvADDPRODUCTOS);
+
             }
 
         private void BUSCAR ( string STRSQL ) {
-            dgvADDPRODUCTOS.DataSource = inicio.consulta(STRSQL);
-            }
-
-        private void comboBox1_SelectedIndexChanged ( object sender, EventArgs e ) {
-            }
-
-        private void comboBox2_SelectedIndexChanged ( object sender, EventArgs e ) {
-            }
-
-        private void dgvADDPRODUCTOS_DoubleClick ( object sender, EventArgs e ) { 
-            }
-
-        private void dgvDETALLEFACTURA_DoubleClick ( object sender, EventArgs e ) {
+            ini.FillData(ref dgvADDPRODUCTOS, STRSQL);
             }
 
         private void button1_Click ( object sender, EventArgs e ) {
@@ -68,15 +58,14 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[2].Value.ToString());
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[4].Value.ToString());
 
-                function.Bill.RowFill(detalles);
-                function.Bill.ShowData();
+                ini.RowFill(detalles);
+                BUSCAR();
 
-                txtTOTALNETO.Text = Convert.ToString(int.Parse(txtTOTALNETO.Text) + int.Parse(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString());
+                txtTOTALNETO.Text = Convert.ToString(int.Parse(txtTOTALNETO.Text) + int.Parse(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString()));
                 txtCANTIDADDETALLE.Clear();
                 }
 
-            BUSCAR(@"SELECT PRID.ID_PRODUCTO AS [ID],PRID.NOM_PRODUCTO AS [PRODUCTO],PRID.MED_PRODUCTO AS [MEDIDA], PRCA.CAN_PRODUCTO AS [CANTIDAD], PRPR.PVEN_PRODUCTO AS [PRECIO]
-FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCTO= PRCA.ID_PRODUCTO  INNER JOIN PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRODUCTO > '0'");
+            BUSCAR();
 
             }
 
@@ -84,12 +73,12 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             List<object> listDataBill = new List<object>();
             listDataBill.Add(int.Parse(cmbNAMECLIENT.ValueMember.ToString()));
             listDataBill.Add(StatusFactura);
-            listDataBill.Add (TypeFactura);
+            listDataBill.Add(TypeFactura);
             listDataBill.Add(txtDESCUENTO);
 
 
-            function.Bill.GenerateBill( listDataBill, dgvDETALLEFACTURA );
-      
+            ini.GenerateBill(listDataBill, ref dgvDETALLEFACTURA);
+
             }
 
         private void btnLimpiar_Click ( object sender, EventArgs e ) {
@@ -109,9 +98,7 @@ FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCT
             }
 
         private void btnCarga_Click ( object sender, EventArgs e ) {
-            BUSCAR(@"SELECT PRID.ID_PRODUCTO AS [ID],PRID.NOM_PRODUCTO AS [PRODUCTO],PRID.MED_PRODUCTO AS [MEDIDA], PRCA.CAN_PRODUCTO AS [CANTIDAD], 
-PRPR.PVEN_PRODUCTO AS [PRECIO] FROM PRODUCTO_ID AS PRID INNER JOIN PRODUCTO_CANTIDAD AS PRCA ON PRID.ID_PRODUCTO= PRCA.ID_PRODUCTO  INNER JOIN 
-PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRODUCTO > '0'");
+            BUSCAR();
             }
 
         private void txtName_TextChanged ( object sender, EventArgs e ) {
@@ -121,7 +108,7 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
         private string TypeFactura ( ) {
             if (rdbCREDITO.Checked) {
                 return "CREDITO";
-                }else {
+                } else {
                 return "EFECTIVO";
                 }
             }
@@ -135,7 +122,7 @@ PRODUCTO_PRECIO AS PRPR ON PRID.ID_PRODUCTO= PRPR.ID_PRODUCTO WHERE PRCA.CAN_PRO
             }
 
         private void cmbNAMECLIENT_TextChanged ( object sender, EventArgs e ) {
-            rdbCREDITO.Enabled = function.Bill.SearchClientName(ref cmbNAMECLIENT, ref cmbDIRECTIONCLEINT);
+            rdbCREDITO.Enabled = ini.SearchClientName(ref cmbNAMECLIENT, ref cmbDIRECTIONCLEINT);
             }
         }
     }

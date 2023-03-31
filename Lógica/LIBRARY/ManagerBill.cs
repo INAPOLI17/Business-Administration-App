@@ -41,5 +41,9 @@ namespace Lógica.LIBRARY {
             manager.PAGO(cli, bill);
 
             }
+
+        public void DeleteRegister( int id ) {
+            manager.DeleteRegisterBill(id);
+            }
         }
     }

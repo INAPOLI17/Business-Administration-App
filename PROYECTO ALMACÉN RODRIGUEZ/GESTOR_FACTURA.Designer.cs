@@ -23,13 +23,14 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent ( ) {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GESTOR_FACTURA));
             pantallaGESTORFACTURA = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel2 = new Panel();
             gbEDITORVISUALIZADOR = new GroupBox();
+            btnSeeAllBill = new Button();
             label3 = new Label();
             label2 = new Label();
             dateTimePicker2 = new DateTimePicker();
@@ -42,13 +43,12 @@
             btnPAGARFACTURA = new Button();
             btnCAMBIARESTADO = new Button();
             panel5 = new Panel();
-            button1 = new Button();
+            btnEliminar = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnATRASGESTOR = new Button();
             panel1 = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            btnSeeAllBill = new Button();
             pantallaGESTORFACTURA.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
@@ -119,6 +119,18 @@
             gbEDITORVISUALIZADOR.TabIndex = 0;
             gbEDITORVISUALIZADOR.TabStop = false;
             gbEDITORVISUALIZADOR.Text = "EDITOR Y VISUALIZADOR";
+            // 
+            // btnSeeAllBill
+            // 
+            btnSeeAllBill.Anchor = AnchorStyles.Left;
+            btnSeeAllBill.ForeColor = Color.Black;
+            btnSeeAllBill.Location = new Point(368, 16);
+            btnSeeAllBill.Name = "btnSeeAllBill";
+            btnSeeAllBill.Size = new Size(51, 41);
+            btnSeeAllBill.TabIndex = 12;
+            btnSeeAllBill.Text = "R";
+            btnSeeAllBill.UseVisualStyleBackColor = true;
+            btnSeeAllBill.Click += btnSeeAllBill_Click;
             // 
             // label3
             // 
@@ -194,28 +206,28 @@
             dgvGESTORFACTURA.AllowUserToResizeRows = false;
             dgvGESTORFACTURA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvGESTORFACTURA.BackgroundColor = SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.ControlDark;
-            dataGridViewCellStyle1.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvGESTORFACTURA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvGESTORFACTURA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvGESTORFACTURA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvGESTORFACTURA.Dock = DockStyle.Fill;
             dgvGESTORFACTURA.EnableHeadersVisualStyles = false;
             dgvGESTORFACTURA.GridColor = SystemColors.ActiveCaptionText;
             dgvGESTORFACTURA.Location = new Point(10, 10);
             dgvGESTORFACTURA.Name = "dgvGESTORFACTURA";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
-            dataGridViewCellStyle2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvGESTORFACTURA.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(224, 224, 224);
+            dataGridViewCellStyle4.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvGESTORFACTURA.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvGESTORFACTURA.RowTemplate.Height = 25;
             dgvGESTORFACTURA.Size = new Size(669, 358);
             dgvGESTORFACTURA.TabIndex = 0;
@@ -261,25 +273,25 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(button1);
+            panel5.Controls.Add(btnEliminar);
             panel5.Dock = DockStyle.Fill;
             panel5.Location = new Point(466, 387);
             panel5.Name = "panel5";
             panel5.Size = new Size(689, 91);
             panel5.TabIndex = 0;
             // 
-            // button1
+            // btnEliminar
             // 
-            button1.Anchor = AnchorStyles.Right;
-            button1.BackColor = Color.FromArgb(192, 0, 0);
-            button1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(372, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(307, 38);
-            button1.TabIndex = 0;
-            button1.Text = "ELIMINAR REGISTRO";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnEliminar.Anchor = AnchorStyles.Right;
+            btnEliminar.BackColor = Color.FromArgb(192, 0, 0);
+            btnEliminar.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliminar.Location = new Point(372, 26);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(307, 38);
+            btnEliminar.TabIndex = 0;
+            btnEliminar.Text = "ELIMINAR REGISTRO";
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += DeleteRegister;
             // 
             // tableLayoutPanel1
             // 
@@ -343,18 +355,6 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // btnSeeAllBill
-            // 
-            btnSeeAllBill.Anchor = AnchorStyles.Left;
-            btnSeeAllBill.ForeColor = Color.Black;
-            btnSeeAllBill.Location = new Point(368, 16);
-            btnSeeAllBill.Name = "btnSeeAllBill";
-            btnSeeAllBill.Size = new Size(51, 41);
-            btnSeeAllBill.TabIndex = 12;
-            btnSeeAllBill.Text = "R";
-            btnSeeAllBill.UseVisualStyleBackColor = true;
-            btnSeeAllBill.Click += btnSeeAllBill_Click;
-            // 
             // GESTOR_FACTURA
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -401,7 +401,7 @@
         private Button btnPAGARFACTURA;
         private Button btnBUCARFACTURA;
         private DataGridView dgvGESTORFACTURA;
-        private Button button1;
+        private Button btnEliminar;
         private DateTimePicker dateTimePicker2;
         private Label label3;
         private Label label2;

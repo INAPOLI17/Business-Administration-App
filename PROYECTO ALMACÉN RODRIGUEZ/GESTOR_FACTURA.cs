@@ -48,7 +48,7 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ {
             }
 
         private void btnCAMBIARESTADO_Click ( object sender, EventArgs e ) {
-            bill.ChangeStatus(dgvGESTORFACTURA.SelectedCells[8].Value.ToString()); 
+            bill.ChangeStatus(dgvGESTORFACTURA.SelectedCells[8].Value.ToString());
             }
 
         private void button1_Click ( object sender, EventArgs e ) {
@@ -62,7 +62,11 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ {
             }
 
         private void btnSeeAllBill_Click ( object sender, EventArgs e ) {
+            bill.FillData(ref dgvGESTORFACTURA);
+            }
 
+        private void DeleteRegister ( object sender, EventArgs e ) {
+            bill.DeleteRegister(int.Parse(dgvGESTORFACTURA.SelectedCells[3].Value.ToString()));
             }
         }
     }

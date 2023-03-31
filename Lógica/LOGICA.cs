@@ -9,24 +9,6 @@ using Lógica.LIBRARY;
 namespace LOGIC {
     public class LOGICA {
 
-        private List<object> listTextBox1;
-        private List<object> listRadio1;
-        public ClassBill Bill = new ClassBill();
-        public ClassWareHouse wareHouse = new ClassWareHouse();
-        public ClassClient client = new ClassClient();
-        public ClassAgenda schedule = new ClassAgenda();
-        public BillAdmin GeneralBalance = new BillAdmin();
-
-        public LOGICA ( ) {
-           
-        }
-
-     
-
-       
-
-
-
     }
 }
 

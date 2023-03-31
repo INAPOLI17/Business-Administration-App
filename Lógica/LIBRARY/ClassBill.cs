@@ -3,25 +3,29 @@ using System;
 using DATABASE.LIBRARY.CLADATOS;
 using System.Collections.Generic;
 using DATABASE;
+using DATABASE.LIBRARY.CLADATOS;
 
 namespace Lógica.LIBRARY {
     public class ClassBill : Report {
-
-        private DataGridView dgvDETALLEFACTURA = new DataGridView();
-        private DATOSFACTURA fa = new DATOSFACTURA();
+       
         private List<object> listRadio1;
         private CONNETION brigdetodata = new CONNETION();
         private int indice_fila = 0;
+        private DATOSFACTURA fa = new DATOSFACTURA();
 
-        public ClassBill ( ) {
-            ColumnForDGV();
+        public void FillData ( ref DataGridView dgvDETALLEFACTURA ) {
+
+            dgvDETALLEFACTURA.DataSource = brigdetodata.consulta("Select * From FACTURA_DETALLE");
+            
             }
-        public DataGridView ShowData ( ) {
 
-            return dgvDETALLEFACTURA;
+        public void FillData ( ref DataGridView dgvDETALLEFACTURA, string name ) {
+
+            dgvDETALLEFACTURA.DataSource = brigdetodata.consulta("Select * From FACTURA_DETALLE WHERE PRODUCTO_ID.NOM_PRODUCTO LIKE %"+name+"%; ");
+
             }
 
-        public void ColumnForDGV ( ) {
+        public void ColumnForDGV (ref DataGridView dgvDETALLEFACTURA ) {
             dgvDETALLEFACTURA.Columns.Add("ID", "ID");
             dgvDETALLEFACTURA.Columns.Add("PRODUCTO", "PRODUCTO");
             dgvDETALLEFACTURA.Columns.Add("CANTIDAD", "CANTIDAD");
@@ -30,7 +34,7 @@ namespace Lógica.LIBRARY {
 
             }
 
-        public void RowFill ( List<string> Data ) {
+        public void RowFill (ref DataGridView dgvDETALLEFACTURA, List<string> Data ) {
             indice_fila = dgvDETALLEFACTURA.Rows.Add();
             DataGridViewRow rw = dgvDETALLEFACTURA.Rows[indice_fila];
             rw.Cells["ID"].Value = Data[0].ToString();
@@ -42,23 +46,22 @@ namespace Lógica.LIBRARY {
             fa.TOTAL += (int.Parse(Data[4].ToString()));
             }
 
-        public void GenerateBill ( List<object> DataForBill, DataGridView dgvDETALLEFACTURA ) {
-
-            DATOSDETALLE de = new DATOSDETALLE();
-
+        public void GenerateBill ( List<object> DataForBill, ref DataGridView dgvDETALLEFACTURA ) {
+            DATOSDETALLE de = new DATOSDETALLE();          
+           try{ 
             fa.IDCLIENTE = int.Parse(DataForBill[0].ToString());
             fa.ESTADO = DataForBill[2].ToString();
             fa.TIPOFACTURA = DataForBill[3].ToString();
             fa.DESCUENTO = int.Parse(DataForBill[4].ToString());
 
-            if (brigdetodata.DATOSFACTURA(dgvDETALLEFACTURA, fa)) {
+            if (brigdetodata.DATOSFACTURA(dgvDETALLEFACTURA, fa)) 
                 reportFactura(dgvDETALLEFACTURA, DataForBill);
-                } else {
+
+                } catch(Exception e) {
+
                 MessageBox.Show("Ocurrio un error al aÑadir la factura");
                 }
             }
-
-     
 
         public bool SearchClientName ( ref ComboBox Name, ref ComboBox Direction ) {
             try {
@@ -100,6 +103,10 @@ namespace Lógica.LIBRARY {
                 MessageBox.Show("Cliente no cuenta con una dirección");
                 }
 
+            }
+
+        public void RowFill ( List<string> detalles ) {
+            throw new NotImplementedException();
             }
         }
     }
