@@ -1,23 +1,27 @@
-﻿namespace PROYECTO_ALMACÉN_RODRIGUEZ {
+﻿using Lógica;
+using Lógica.LIBRARY;
+
+namespace PROYECTO_ALMACÉN_RODRIGUEZ {
     public partial class AJUSTEINIICIO : Form {
         public AJUSTEINIICIO ( ) {
             InitializeComponent();
+            text = new List<TextBox>();
+            text.Add(txtNAMEUSER);
+            text.Add(txtPASSACTUALLY);
+            text.Add(txtPASSNEW);
+            text.Add(txtPASSNEWCONFIRM);
+
+            user1 = new DataUsers();
             }
 
-
-
-
+        List<TextBox> text ;
+        DataUsers user1;
         private void AJUSTEINIICIO_Load ( object sender, EventArgs e ) {
-            txtNAMEUSER.Text = DATOSUSER.NAMEUSER;
+            user1.complete(text);
             }
 
         private void btnAPLICAR_Click ( object sender, EventArgs e ) {
-            if (txtPASSNEW.Text == txtPASSNEWCONFIRM.Text && txtPASSACTUALLY.Text == DATOSUSER.PASSWORDUSER) {
-                cn.DATOSUSUARIO(DATOSUSER.IDUSER, txtNAMEUSER.Text, txtPASSNEWCONFIRM.Text);
-                MessageBox.Show("Los cambios se han aplicado correctamente");
-                } else {
-                MessageBox.Show("Los Datos no correspondieron, por favor verifique");
-                }
+            user1.aplicar(text);
             }
         }
     }

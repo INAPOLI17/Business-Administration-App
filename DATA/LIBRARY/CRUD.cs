@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DATABASE.LIBRARY.CLADATOS;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using DATABASE;
 using System.Windows.Forms;
-using DATABASE.LIBRARY.CLADATOS;
 
 
 namespace DATABASE {
@@ -19,8 +17,7 @@ namespace DATABASE {
             return tl;
             }
 
-        public void DATOSCLIENTE ( DATOSCLIENTE CLIENTE ) {
-
+        public void CREATEDATOSCLIENTE ( DATOSCLIENTE CLIENTE ) {
 
             SqlCommand cmd = new SqlCommand("ADDCLIENTE", conectar);
             conectar.Open();
@@ -35,6 +32,36 @@ namespace DATABASE {
             cmd.ExecuteNonQuery();
 
             conectar.Close();
+            }
+
+        public void UPDATEDATOSCLIENTE ( DATOSCLIENTE CLIENTE ) {
+
+            SqlCommand cmd = new SqlCommand("ADDCLIENTE", conectar);
+            conectar.Open();
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@NOMBRE", CLIENTE.NAMECLIENTE);
+            cmd.Parameters.AddWithValue("@APELLIDO", CLIENTE.APELLIDO);
+            cmd.Parameters.AddWithValue("@TELEFONO", CLIENTE.TELEFONO);
+            cmd.Parameters.AddWithValue("@DIRECCION", CLIENTE.DIRECCION);
+
+            cmd.ExecuteNonQuery();
+
+            conectar.Close();
+            }
+
+        public void DeleteCliente ( int id ) {
+
+            SqlCommand bf = new SqlCommand("DELETE", conectar);
+
+            bf.CommandType = CommandType.StoredProcedure;
+
+            bf.Parameters.AddWithValue("@ID", id);
+
+            conectar.Open();
+            bf.ExecuteNonQuery();
+            conectar.Close();
+
             }
 
         public void DATOSALMACEN ( DATOSFACTURA ALMACEN, string clave ) {
@@ -85,7 +112,6 @@ namespace DATABASE {
                 }
             }
 
-       
         private DataTable DatosDetalle ( DataGridView detail ) {
             DataTable details = new DataTable();
             details.Columns.Add("ID_PRODETAIL");
@@ -114,7 +140,8 @@ namespace DATABASE {
                 cmd.ExecuteNonQuery();
 
                 conectar.Close();
-                }catch (Exception ex) {
+                }
+            catch (Exception ex) {
                 return;
                 }
             }
@@ -163,16 +190,16 @@ namespace DATABASE {
             conectar.Close();
             }
 
-        public void AGENDA ( DATOAGENDA AG) {
+        public void AGENDA ( DATOAGENDA AG ) {
 
-                    SqlCommand cmd = new SqlCommand("ADDAGENDA", conectar);
-                    cmd.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand("ADDAGENDA", conectar);
+            cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@ID", AG.IDAGENDA);
-                    cmd.Parameters.AddWithValue("@NOMBRE", AG.NOMBREAGENDA);
-                    cmd.Parameters.AddWithValue("@APELLIDO", AG.APELLIDOAGENDA);
-                    cmd.Parameters.AddWithValue("@DIRECCION", AG.DIRECCIONAGENDA);
-                    cmd.Parameters.AddWithValue("@TELEFONO", AG.TELEFONO);
+            cmd.Parameters.AddWithValue("@ID", AG.IDAGENDA);
+            cmd.Parameters.AddWithValue("@NOMBRE", AG.NOMBREAGENDA);
+            cmd.Parameters.AddWithValue("@APELLIDO", AG.APELLIDOAGENDA);
+            cmd.Parameters.AddWithValue("@DIRECCION", AG.DIRECCIONAGENDA);
+            cmd.Parameters.AddWithValue("@TELEFONO", AG.TELEFONO);
 
             conectar.Open();
             cmd.ExecuteNonQuery();
@@ -188,20 +215,6 @@ namespace DATABASE {
 
             conectar.Open();
             bf.ExecuteNonQuery();
-            conectar.Close();
-            }
-
-        public void AJUSTE ( string us, string pass ) {
-            SqlCommand cmd = new SqlCommand("ADDUSER", conectar);
-            conectar.Open();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@NAME", us);
-            cmd.Parameters.AddWithValue("@PASS", pass);
-
-
-
-            cmd.ExecuteNonQuery();
-
             conectar.Close();
             }
 

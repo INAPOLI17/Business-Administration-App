@@ -9,3 +9,9 @@ C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.pdb
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\Lógica.Properties.Resources.resources
 C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\obj\Debug\LOGIC.csproj.GenerateResource.cache
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\DATA.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\itextsharp.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\DATA.pdb
+C:\Users\Apolinar Rodríguez\OneDrive\Documentos\GitHub\Business-Administration-App\Lógica\bin\Debug\itextsharp.xml

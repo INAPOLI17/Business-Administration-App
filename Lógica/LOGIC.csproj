@@ -59,10 +59,10 @@
     <Compile Include="LIBRARY\ClassBill.cs" />
     <Compile Include="LIBRARY\ClassClient.cs" />
     <Compile Include="LIBRARY\ClassWareHouse.cs" />
+    <Compile Include="LIBRARY\DataUsers.cs" />
     <Compile Include="LIBRARY\ManagerBill.cs" />
     <Compile Include="LIBRARY\Report.cs" />
     <Compile Include="LIBRARY\Schedule.cs" />
-    <Compile Include="LOGICA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

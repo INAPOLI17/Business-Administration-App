@@ -14,7 +14,6 @@ namespace DATABASE.LIBRARY.CLADATOS
 
         public string APELLIDO { get; set; }
 
-        public DateTime FECHA = Convert.ToDateTime(DateTime.Today.ToShortDateString());
 
         public string TELEFONO { get; set; }
 

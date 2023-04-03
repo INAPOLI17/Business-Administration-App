@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Lógica.LIBRARY;
+﻿using Lógica.LIBRARY;
 
-namespace PROYECTO_ALMACÉN_RODRIGUEZ
-{
+namespace PROYECTO_ALMACÉN_RODRIGUEZ {
     public partial class AGENDA : Form
     {
         public AGENDA()

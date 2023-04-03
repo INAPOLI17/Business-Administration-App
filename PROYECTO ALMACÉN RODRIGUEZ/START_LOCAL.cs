@@ -22,20 +22,20 @@ namespace INTERFACE {
             ListRadio.Add(rdbENTREGADO);
             ListRadio.Add(rdbNOENTREGADO);
 
-             ini = new ClassBill();
+            ini = new ClassBill();
             }
 
         private ClassBill ini;
 
         private void INICIO_Load ( object sender, EventArgs e ) {
-            BUSCAR();                          
+            BUSCAR();
             }
 
         private void btnBuscarproducto_Click ( object sender, EventArgs e ) {
             BUSCAR(txtProductos.Text);
             }
 
-        private void BUSCAR () {
+        private void BUSCAR ( ) {
 
             ini.FillData(ref dgvADDPRODUCTOS);
 
@@ -58,7 +58,7 @@ namespace INTERFACE {
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[2].Value.ToString());
                 detalles.Add(dgvADDPRODUCTOS.SelectedCells[4].Value.ToString());
 
-                ini.RowFill(detalles);
+                ini.RowFill(ref dgvDETALLEFACTURA, detalles);
                 BUSCAR();
 
                 txtTOTALNETO.Text = Convert.ToString(int.Parse(txtTOTALNETO.Text) + int.Parse(dgvADDPRODUCTOS.SelectedCells[3].Value.ToString()));
@@ -75,6 +75,8 @@ namespace INTERFACE {
             listDataBill.Add(StatusFactura);
             listDataBill.Add(TypeFactura);
             listDataBill.Add(txtDESCUENTO);
+            listDataBill.Add(txtTotal);
+            listDataBill.Add(txtTOTALNETO);
 
 
             ini.GenerateBill(listDataBill, ref dgvDETALLEFACTURA);

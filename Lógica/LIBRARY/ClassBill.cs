@@ -3,7 +3,8 @@ using System;
 using DATABASE.LIBRARY.CLADATOS;
 using System.Collections.Generic;
 using DATABASE;
-using DATABASE.LIBRARY.CLADATOS;
+using System.Data;
+
 
 namespace Lógica.LIBRARY {
     public class ClassBill : Report {
@@ -16,13 +17,13 @@ namespace Lógica.LIBRARY {
         public void FillData ( ref DataGridView dgvDETALLEFACTURA ) {
 
             dgvDETALLEFACTURA.DataSource = brigdetodata.consulta("Select * From FACTURA_DETALLE");
-            
+            dgvDETALLEFACTURA.Columns["ID"].Visible = false;
             }
 
         public void FillData ( ref DataGridView dgvDETALLEFACTURA, string name ) {
 
             dgvDETALLEFACTURA.DataSource = brigdetodata.consulta("Select * From FACTURA_DETALLE WHERE PRODUCTO_ID.NOM_PRODUCTO LIKE %"+name+"%; ");
-
+            dgvDETALLEFACTURA.Columns["ID"].Visible = false;
             }
 
         public void ColumnForDGV (ref DataGridView dgvDETALLEFACTURA ) {
@@ -103,10 +104,6 @@ namespace Lógica.LIBRARY {
                 MessageBox.Show("Cliente no cuenta con una dirección");
                 }
 
-            }
-
-        public void RowFill ( List<string> detalles ) {
-            throw new NotImplementedException();
             }
         }
     }

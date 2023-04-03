@@ -20,25 +20,35 @@ namespace Lógica.LIBRARY {
         public void DataView( ref DataGridView dt, String key ) {
 
             if (key != String.Empty) {
-                dt.DataSource = bridgetobd.consulta("SELECT * FROM PRINCIPAL CLIENT WHERE NOMBRE = '%" + key + "%'");
+                dt.DataSource = bridgetobd.consulta("SELECT * FROM [PRINCIPAL CLIENT] WHERE NOMBRE = '%" + key + "%'");
                 }
             
-             dt.DataSource = bridgetobd.consulta("SELECT * FROM PRINCIPAL CLIENT");
+             dt.DataSource = bridgetobd.consulta("SELECT * FROM [PRINCIPAL CLIENT]");
             }
-        public void SaveDataClient ( List<object> client) {
-            cn.ID = int.Parse(client[0].ToString());
-            cn.NAMECLIENTE = client[1].ToString();
-            cn.APELLIDO = client[2].ToString();
-            cn.DIRECCION = client[3].ToString();
-            cn.TELEFONO = client[4].ToString();
+        public void SaveDataClient ( List<TextBox> client) {
+            
+            cn.NAMECLIENTE = client[1].Text;
+            cn.APELLIDO = client[2].Text;
+            cn.DIRECCION = client[3].Text;
+            cn.TELEFONO = client[4].Text;
 
-            bridgetobd.DATOSCLIENTE(cn);
+            bridgetobd.CREATEDATOSCLIENTE(cn);
+
+            }
+
+        public void UpdateDataClient ( List<TextBox> client ) {
+            cn.ID = int.Parse(client[0].Text);
+            cn.NAMECLIENTE = client[1].Text;
+            cn.APELLIDO = client[2].Text;
+            cn.DIRECCION = client[3].Text;
+            cn.TELEFONO = client[4].Text;
+
+            bridgetobd.CREATEDATOSCLIENTE(cn);
 
             }
 
         public void DeleteDataClient (int id ) {
-            cn.ID = id;
-            bridgetobd.DATOSCLIENTE(cn);
+            bridgetobd.DeleteCliente(id);
             }
 
         }

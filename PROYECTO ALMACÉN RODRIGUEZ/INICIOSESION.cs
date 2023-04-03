@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using DATABASE;
+using DATABASE.LIBRARY.CLADATOS;
 
 
 namespace PROYECTO_ALMACÉN_RODRIGUEZ
@@ -16,19 +11,17 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
         public INICIOSESION()
         {
             InitializeComponent();
-            
+            hm = new HOME();
         }
-
-        CONEXION LOGIN = new CONEXION();
-       HOME hm = new HOME();
+        HOME hm;
+        CONNETION user = new CONNETION();
 
         private void btnINICIARSESSION_Click(object sender, EventArgs e)
         {
             
-            if(LOGIN.checkinicio(txtUSUARIOINICIOSESION.Text, txtCONTRASEÑAINICIOSESSION.Text))
+            if(user.checkinicio(txtUSUARIOINICIOSESION.Text, txtCONTRASEÑAINICIOSESSION.Text))
             {
                 hm.Show();
-                //hm.TurnoFormulario(new INICIO());
                 this.Visible = false;
             }
             else

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DATABASE.LIBRARY.CLADATOS
 {
-    public  class DATOSUSER
+    public class DATOSUSER
     {
         public static int IDUSER { get; set; } 
         public static string NAMEUSER { get; set; }

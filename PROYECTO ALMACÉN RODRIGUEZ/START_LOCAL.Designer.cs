@@ -508,9 +508,9 @@
             // btnCarga
             // 
             btnCarga.ForeColor = Color.Black;
-            btnCarga.Location = new Point(21, 115);
+            btnCarga.Location = new Point(21, 108);
             btnCarga.Name = "btnCarga";
-            btnCarga.Size = new Size(32, 24);
+            btnCarga.Size = new Size(32, 28);
             btnCarga.TabIndex = 6;
             btnCarga.Text = "C";
             btnCarga.UseVisualStyleBackColor = true;

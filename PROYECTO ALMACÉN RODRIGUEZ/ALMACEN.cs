@@ -1,4 +1,4 @@
-﻿using LOGIC;
+﻿using Lógica.LIBRARY;
 
 namespace PROYECTO_ALMACÉN_RODRIGUEZ {
     public partial class ALMACEN : Form {
@@ -13,10 +13,10 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ {
             products.Add(txtPRECIOVENTA);
             products.Add(txtID);
 
-            function = new LOGICA();
+            function = new ClassWareHouse();
             }
 
-        private LOGICA function;
+        private ClassWareHouse function;
         private List<object> products = new List<object>();
 
         private void btnATRASALMACEN_Click ( object sender, EventArgs e ) {
@@ -24,11 +24,11 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ {
             }
 
         private void ALMACEN_Load ( object sender, EventArgs e ) {
-            function.wareHouse.DataView(ref dvgALMACEN, "");
+            function.DataView(ref dvgALMACEN, "");
             }
 
         private void txtBUSCARPRODUCTO_Click ( object sender, EventArgs e ) {
-            function.wareHouse.DataView(ref dvgALMACEN , txtWAREHOUSESEARCH.Text);
+            function.DataView(ref dvgALMACEN , txtWAREHOUSESEARCH.Text);
             }
 
         private void dvgALMACEN_DoubleClick ( object sender, EventArgs e ) {
@@ -57,14 +57,14 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ {
 
         private void btnGUARDARALMACEN_Click ( object sender, EventArgs e ) {
 
-            function.wareHouse.SaveDataProducts(products);
-            function.wareHouse.DataView(ref dvgALMACEN, "");
+            function.SaveDataProducts(products);
+            function.DataView(ref dvgALMACEN, "");
             }
 
         private void btnELIMINARREGISTROALMACEN_Click ( object sender, EventArgs e ) {
 
-            function.wareHouse.DeleteDataProducts(int.Parse(dvgALMACEN.SelectedCells[0].Value.ToString()));
-            function.wareHouse.DataView(ref dvgALMACEN, "");
+            function.DeleteDataProducts(int.Parse(dvgALMACEN.SelectedCells[0].Value.ToString()));
+            function.DataView(ref dvgALMACEN, "");
 
             }
         }

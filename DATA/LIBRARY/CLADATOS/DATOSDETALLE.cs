@@ -19,5 +19,6 @@ namespace DATABASE.LIBRARY.CLADATOS
         public int PRECIO { get; set;}
 
         public string MEDIDA { get; set;}
-    }
+
+        }
 }

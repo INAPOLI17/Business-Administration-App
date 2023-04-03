@@ -17,37 +17,20 @@ namespace PROYECTO_ALMACÉN_RODRIGUEZ
             InitializeComponent();
         }
 
-        public string VentanaActual;
+        private string VentanaActual;
+        private Form FormularioActivo = null;
 
-        private void btnATRASADMINISTRACION_Click(object sender, EventArgs e)
-        {
-            switch (VentanaActual) {
-                case "BALANCE GENERAL":
-                    this.panelADMINISTRACION.Controls.Remove(FormularioActivo);
-                    label3.Text = "ADMINISTRACION";
-                    VentanaActual = "ADMINISTRACION";
-                    break;
+        private void btnATRASADMINISTRACION_Click ( object sender, EventArgs e ) {
 
-                case "AGENDA":
-                    this.panelADMINISTRACION.Controls.Remove(FormularioActivo);
-                    label3.Text = "ADMINISTRACION";
-                    VentanaActual = "ADMINISTRACION";
-                    break;
-
-                case "AJUSTES DE INICIO":
-                    this.panelADMINISTRACION.Controls.Remove(FormularioActivo);
-                    label3.Text = "ADMINISTRACION";
-                    VentanaActual = "ADMINISTRACION";
-                    break;
-
-                case "ADMINISTRACION": 
-                    this.Close();
-                    break;
-
-            }
+            if (VentanaActual == string.Empty) {
+                this.Close();
+                } else {
+                this.panelADMINISTRACION.Controls.Remove(FormularioActivo);
+                VentanaActual = string.Empty;
+                }          
         }
 
-        private Form FormularioActivo = null;
+        
         public void PantallaVisual(Form formhijo)
         {
             if (FormularioActivo != null)
